@@ -1,4 +1,5 @@
 # DNS
+internal DNS server infrastructure on APT Linux.
 ## Infrastructure
 ### name servers
 | Host | Role | Private FQDN | Private IP Address |
