@@ -1,4 +1,5 @@
 # DNS
+![dns](./doc/dns.png?raw=true "dns")
 internal DNS server infrastructure on APT Linux.
 ## Infrastructure
 ### name servers
