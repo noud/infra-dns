@@ -51,10 +51,10 @@ Address: 10.128.100.101
 [How To Configure BIND as a Private Network DNS Server on Ubuntu 18.04](http://digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04)
 ## hardware
 ### router
-| Brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | spec | IP Addresses |
-| --- | --- | --- | --- |
-| [Linksys](http://linksys.com) | [EA6900 — AC 1900](http://linksys.com/us/support-product?pid=01t80000003KdHUAA0) | 1GB & WiFi | 10.128.0.0/16
-| [NETGEAR](http://netgear.com) | [WINDR4500 — N900](http://netgear.com/support/product/WNDR4500.aspx) | 1GB & WiFi | 192.168.1.0/32
+| Brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP Addresses |
+| --- | --- | --- | --- | --- |
+| [Linksys](http://linksys.com) | [EA6900](http://linksys.com/us/support-product?pid=01t80000003KdHUAA0) | AC 1900 | 1GB & WiFi | 10.128.0.0/16
+| [NETGEAR](http://netgear.com) | [WINDR4500](http://netgear.com/support/product/WNDR4500.aspx) | N900 | 1GB & WiFi | 192.168.1.0/32
 ### pc
 | Brand | Type | CPU | memory | Private IP Address |
 | --- | --- | --- | --- | --- |
