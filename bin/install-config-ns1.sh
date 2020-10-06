@@ -4,6 +4,8 @@ export HOST=ns1
 
 bin/install.sh
 
+sudo patch -d /etc/default < etc/${HOST}/default/named.diff
+
 sudo patch -d /etc/bind < etc/${HOST}/bind/named.conf.options.diff
 
 sudo mkdir /etc/bind/zones

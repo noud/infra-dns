@@ -1,0 +1,8 @@
+--- /etc/default/named	2020-10-06 21:43:26.152264246 +0200
++++ etc/ns1/default/named	2020-10-06 21:46:01.797737909 +0200
+@@ -3,4 +3,4 @@
+ RESOLVCONF=no
+ 
+ # startup options for the server
+-OPTIONS="-u bind"
++OPTIONS="-u bind -4"
