@@ -1,6 +1,6 @@
 --- etc/bind/named.conf.options	2020-10-02 19:41:25.083968834 +0200
 +++ etc/ns1/named.conf.options	2020-10-02 20:21:16.443675770 +0200
-@@ -1,6 +1,24 @@
+@@ -1,6 +1,26 @@
 +acl "trusted" {
 +        10.128.10.11;    # ns1 - can be set to localhost
 +        10.128.20.12;    # ns2
@@ -15,6 +15,8 @@
 +	allow-recursion { trusted; };  # allows recursive queries from "trusted" clients
 +	listen-on { 10.128.10.11; };   # ns1 private IP address - listen on private network only
 +	allow-transfer { none; };      # disable zone transfers by default
++   dnssec-enable yes;
++   dnssec-validation yes;
 +
 +	forwarders {
 +		127.0.0.53;
