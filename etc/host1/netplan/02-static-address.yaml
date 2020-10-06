@@ -1,0 +1,6 @@
+network:
+    version: 2
+    ethernets:
+        enp5s0:                               # Private network interface
+            addresses:
+                - 10.128.100.101/16
