@@ -5,5 +5,5 @@ network:
             nameservers:
                 addresses:
                 - 10.128.10.11                # Private IP for ns1
-                - 10.132.20.12                # Private IP for ns2
+                - 10.128.20.12                # Private IP for ns2
                 search: [ net1.domain ]  # DNS zone
