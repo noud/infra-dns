@@ -1,6 +1,6 @@
 --- etc/bind/named.conf.options	2020-10-02 19:41:25.083968834 +0200
 +++ etc/ns1/named.conf.options	2020-10-02 20:21:16.443675770 +0200
-@@ -1,6 +1,26 @@
+@@ -1,6 +1,25 @@
 +acl "trusted" {
 +        10.128.10.11;    # ns1 - can be set to localhost
 +        10.128.20.12;    # ns2
@@ -19,7 +19,6 @@
 +   dnssec-validation yes;
 +
 +	forwarders {
-+		127.0.0.53;
 +		8.8.8.8;
 +		8.8.4.4;
 +	};
