@@ -20,6 +20,6 @@ sudo named-checkzone 128.10.in-addr.arpa /etc/bind/zones/db.10.128
 # ip address show to 10.128.0.0/16
 sudo cp etc/${HOST}/netplan/* /etc/netplan
 sudo netplan apply
-sudo cp etc/${HOST}/resolv.conf /etc
+# sudo cp etc/${HOST}/resolv.conf /etc
 
 sudo systemctl restart bind9
