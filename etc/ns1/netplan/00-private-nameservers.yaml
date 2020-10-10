@@ -1,9 +1,9 @@
 network:
     version: 2
     ethernets:
-        eno1:                                 # Private network interface
+        enx0040f498cffb:                      # Private network interface
             nameservers:
                 addresses:
                 - 10.128.10.11                # Private IP for ns1
                 - 10.128.20.12                # Private IP for ns2
-                search: [ net1.domain ]  # DNS zone
+                search: [ net1.domain ]       # DNS zone

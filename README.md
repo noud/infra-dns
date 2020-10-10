@@ -54,8 +54,14 @@ Address: 10.128.100.101
 ### router
 | Brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP Addresses |
 | --- | --- | --- | --- | --- |
-| [Linksys](http://linksys.com) | [EA6900](http://linksys.com/us/support-product?pid=01t80000003KdHUAA0) | AC 1900 | 1GB & WiFi | 10.128.0.0/16
-| [NETGEAR](http://netgear.com) | [WINDR4500](http://netgear.com/support/product/WNDR4500.aspx) | N900 | 1GB & WiFi | 192.168.1.0/32
+| [Linksys](http://linksys.com) | [EA6900](http://linksys.com/us/support-product?pid=01t80000003KdHUAA0) | AC 1900 | 1GB & WiFi | 192.168.1.0/32
+| [NETGEAR](http://netgear.com) | [WINDR4500](http://netgear.com/support/product/WNDR4500.aspx) | N900 | 1GB & WiFi | 10.128.0.0/16
+### interfaces
+| Brand | Model |
+| --- | --- |
+| [EMINENT](http://eminent-online.com) | [EM1010 Rev 2](http://support.eminent-online.com/hc/en-us/articles/360009536679-EM1010-Download-Drivers-Software) |
+|  | EM4090 Rev 1 |
+|  | EM4090 Rev 2 |
 ### pc
 | Brand | Series | Model | CPU | memory (GB) | Private IP Address |
 | --- | --- | --- | --- | --- | --- |

@@ -1,6 +1,6 @@
 network:
     version: 2
     ethernets:
-        enp3s0:                               # Private network interface
+        enx0040f4a613c7:                      # Private network interface
             addresses:
                 - 10.128.20.12/16

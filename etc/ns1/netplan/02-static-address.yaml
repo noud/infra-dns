@@ -1,6 +1,6 @@
 network:
     version: 2
     ethernets:
-        eno1:                                 # Private network interface
+        enx0040f498cffb:                      # Private network interface
             addresses:
                 - 10.128.10.11/16
