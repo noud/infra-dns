@@ -12,8 +12,10 @@
             - bind9utils
             - bind9-doc
     - role: dns
+      when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      debug: var=hostvars[inventory_hostname]['ansible_default_ipv4']['address']
       vars:
-        interface_no: 10.128.10.11
+        interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
     - role: packages
       vars:
         package_name: SSH
