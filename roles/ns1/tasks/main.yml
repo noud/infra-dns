@@ -1,1 +1,20 @@
-- name: Install ns1
+- name: create bind zones dir
+  file:
+    path: /etc/bind/zones
+    state: directory
+- name: Install ns1 cp zones
+  template: 
+    src: "etc/bind/zones/db.net1.domain" 
+    dest: "/etc/bind/zones"
+- name: Install ns1 revert cp zones
+  template: 
+    src: "etc/bind/zones/db.10.128" 
+    dest: "/etc/bind/zones"
+- name: config zones to DNS
+  template: 
+    src: "etc/bind/named.conf.local.diff" 
+    dest: "/tmp/named.conf.local.diff"
+- name: and patch
+  ansible.posix.patch:
+    src: /tmp/named.conf.local.diff
+    dest: /etc/bind/named.conf.local
