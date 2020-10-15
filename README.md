@@ -39,8 +39,6 @@ Address: 10.128.100.101
 ## install
 - add admin user
 - set Private IP Address with netmask ```255.255.0.0```
-
-```
 - [Ansible](http://ansible.com)
     - install
     - configure host or network(s) of hosts by Ansible
