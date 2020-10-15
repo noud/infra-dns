@@ -1,5 +1,12 @@
 - name: set DNS to ip4
-# cp patch file
+  template: 
+    src: "etc/default/named.diff" 
+    dest: "/tmp/named.diff"
+    # with_fileglob:
+    #     - "../templates/default/*
 # patch
-# vars:
-# interface_no: 10.128.10.11
+- name: add machines to DNS
+  template: 
+    src: "etc/bind/named.conf.options.diff" 
+    dest: "/tmp/named.conf.options.diff"
+#- patch

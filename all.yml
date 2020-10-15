@@ -11,6 +11,9 @@
             - bind9
             - bind9utils
             - bind9-doc
+    - role: dns
+      vars:
+        interface_no: 10.128.10.11
     - role: packages
       vars:
         package_name: SSH
