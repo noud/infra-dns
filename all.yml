@@ -16,6 +16,7 @@
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
         interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    - role: dns-restart
     - role: packages
       vars:
         package_name: SSH

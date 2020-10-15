@@ -1,0 +1,4 @@
+- name: start service bind, if not started
+  service:
+    name: bind9
+    state: restarted
