@@ -39,10 +39,18 @@ Address: 10.128.100.101
 ## install
 - add admin user
 - set Private IP Address with netmask ```255.255.0.0```
-- install and config by shell script
+
 ```
+- [Ansible](http://ansible.com)
+    - install
+    - configure host or network(s) of hosts by Ansible
+```
+sudo apt install -y ansible
+ansible-galaxy collection install ansible.posix
 # on 10.128.10.11
-./bin/install-config-ns1.sh
+#./bin/install-config-ns1.sh
+ansible-vault create vault
+ansible-playbook -i domain all.yml --ask-vault-pass
 # on 10.128.20.12
 ./bin/install-config-ns2.sh
 # on 10.128.100.101

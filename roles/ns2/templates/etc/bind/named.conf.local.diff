@@ -1,0 +1,17 @@
+--- etc/bind/named.conf.local	2020-10-02 19:41:25.083968834 +0200
++++ etc/ns2/named.conf.local	2020-10-02 21:05:26.059450989 +0200
+@@ -6,3 +6,14 @@
+ // organization
+ //include "/etc/bind/zones.rfc1918";
+ 
++zone "net1.domain" {
++    type slave;
++    file "db.net1.domain";
++    masters { 10.128.10.11; };  # ns1 private IP
++};
++
++zone "128.10.in-addr.arpa" {
++    type slave;
++    file "db.10.128";
++    masters { 10.128.10.11; };  # ns1 private IP
++};

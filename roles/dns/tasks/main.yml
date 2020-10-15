@@ -1,0 +1,5 @@
+- name: set DNS to ip4
+# cp patch file
+# patch
+# vars:
+# interface_no: 10.128.10.11
