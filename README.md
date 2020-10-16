@@ -77,4 +77,9 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | --- | --- | --- | --- | --- |
 | [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |
 | [hama](http://hama.com) |  |  | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | 4007249553485 | USB 2.0 Multi Card Reader |
-…WIP…
+### periferials
+| brand | model | what |
+| --- | --- | --- |
+| [Logitech](http://logitechg.com) | [M310]() | mouse |
+|  |  [K520]() | kb |
+…WIP…=
