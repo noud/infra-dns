@@ -65,18 +65,19 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [EMINENT](http://eminent-online.com) | [EM1010 Rev 2](http://support.eminent-online.com/hc/en-us/articles/360009536679-EM1010-Download-Drivers-Software) |
 |  | EM4090 Rev 1 |
 |  | EM4090 Rev 2 |
-### pc
+### [PC](http://en.wikipedia.org/wiki/Personal_computer)
 | brand | series | model | CPU | memory (GB) | Private IP Address |
 | --- | --- | --- | --- | --- | --- |
 | [HP](http://hp.com) | ProDesk | [600 G2 DM](http://support.hp.com/us-en/product/hp-prodesk-600-g2-desktop-mini-pc/8376393) | Core i7-6700T @ 2.80GHz * 8 | 32 | 10.128.10.11
 | [Intel](http://intel.com) | NUC | [5](http://intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC5i3RYK_NUC5i5RYK_UserGuide.pdf) | Pentium E6500 @ 2.93GHz * 2 | 4 | 10.128.20.12
 | [Acer](http://acer.com) | Aspire | [Z5600](http://acer.com/ac/en/US/content/support-product/1243;-;AZ5600) | Celeron N3050 @ 1.60gHZ * 2 | 4 | 10.128.100.101
 | [Dell](http://dell.com) | Wyse | [3040](http://dell.com/support/manuals/nl/nl/nlbsdt1/wyse-3040-thin-client/3040_ug/welcome-to-dell-wyse-3040-thin-client?guid=guid-423f8ce2-8950-497f-88d3-22c2e1e3fe4a&lang=en-us) | Cherry Trail x5 Z-8350 @ 1.44 GHz * 4 | 2 |  |
-### usb
-| brand | model | name | item | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) |
+### [USB](http://en.wikipedia.org/wiki/USB)
+| brand | item | name | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) | [EAN](http://en.wikipedia.org/wiki/International_Article_Number)
 | --- | --- | --- | --- | --- |
 | [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |
-| [hama](http://hama.com) |  |  | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | 4007249553485 | USB 2.0 Multi Card Reader |
+| [Trust](http://trust.com) | [14251](http://trust.com/en/product/14251-4-port-mini-usb-2-0-design-hub-hu-3340m) | 4 Port Mini USB 2.0 |  | 8713439142518 |
+| [hama](http://hama.com) | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | USB 2.0 Multi Card Reader | 4007249553485 |  |
 ### [peripheral](http://en.wikipedia.org/wiki/Peripheral)
 | brand | model | what |
 | --- | --- | --- |
@@ -85,7 +86,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 | [Logitech](http://logitechg.com) | K520 | keyboard |
 |  | M310 | mouse |
-### mobile
+### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | model |
 | --- | --- |
 | [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) |
