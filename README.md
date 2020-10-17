@@ -81,6 +81,6 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | brand | model | what |
 | --- | --- | --- |
 | [Logitech](http://logitechg.com) | [M310](http://logitech.com/nl-nl/mice?filters=3862#) | mouse |
-|  | K520 | kb |
+|  | K520 | keyboard |
 
 …WIP…
