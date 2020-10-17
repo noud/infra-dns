@@ -84,7 +84,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) | phone |
 | KAZO | Girly | powerbank |
 | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
-| [Logitech](http://logitechg.com) | [M310](http://logitech.com/nl-nl/mice?filters=3862#) | mouse |
+| [Logitech](http://logitechg.com) | M310 | mouse |
 |  | K520 | keyboard |
 
 …WIP…
