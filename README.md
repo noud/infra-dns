@@ -77,9 +77,13 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | --- | --- | --- | --- | --- |
 | [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |
 | [hama](http://hama.com) |  |  | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | 4007249553485 | USB 2.0 Multi Card Reader |
-### periferials
+### periferals
 | brand | model | what |
 | --- | --- | --- |
+| [Jabra](http://jabra.com) | [Talk 30](http://jabra.com/bluetooth-headsets/jabra-talk-30) | headset |
+| [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) | phone |
+| KAZO | Girly | powerbank |
+| bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 | [Logitech](http://logitechg.com) | [M310](http://logitech.com/nl-nl/mice?filters=3862#) | mouse |
 |  | K520 | keyboard |
 
