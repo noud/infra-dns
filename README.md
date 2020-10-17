@@ -81,10 +81,13 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | brand | model | what |
 | --- | --- | --- |
 | [Jabra](http://jabra.com) | [Talk 30](http://jabra.com/bluetooth-headsets/jabra-talk-30) | headset |
-| [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) | phone |
 | KAZO | Girly | powerbank |
 | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 | [Logitech](http://logitechg.com) | K520 | keyboard |
 |  | M310 | mouse |
+### mobile
+| brand | model |
+| --- | --- |
+| [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) |
 
 …WIP…
