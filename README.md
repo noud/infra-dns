@@ -80,6 +80,6 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### periferials
 | brand | model | what |
 | --- | --- | --- |
-| [Logitech](http://logitechg.com) | [M310]() | mouse |
-|  |  [K520]() | kb |
-…WIP…=
+| [Logitech](http://logitechg.com) | [M310](http://logitech.com/nl-nl/mice?filters=3862#) | mouse |
+|  | K520 | kb |
+…WIP…
