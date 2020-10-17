@@ -3,42 +3,42 @@
 internal DNS server infrastructure on APT Linux.
 ## Infrastructure
 ### name servers
-| Host | Role | private FQDN | private IP Address |
+| host | role | private FQDN | private IP address |
 | --- | --- | --- | --- |
 | ns1 | Primary DNS Server | ns1.net1.domain | 10.128.10.11 |
 | ns2 | Secondary DNS Server | ns2.net1.domain | 10.128.20.12 |
 <!-- @todo ns3  Tertiary DNS Server  ns3.net1.domain  10.128.30.13 -->
 ### clients
-| Host | Role | private FQDN | private IP Address |
+| host | role | private FQDN | private IP address |
 | --- | --- | --- | --- |
-| host1 | Generic Host 1 | host1.net1.domain | 10.128.100.101 |
-| host2 | Generic Host 2 | host2.net1.domain | 10.128.200.102 |
+| host1 | Generic host 1 | host1.net1.domain | 10.128.100.101 |
+| host2 | Generic host 2 | host2.net1.domain | 10.128.200.102 |
 ## use
 ```
 noud@hp-prodesk-600-g2-dm:~/workspace/infra-dns$ nslookup
 > ns1
 Server:         10.128.10.11
-Address:        10.128.10.11#53
+address:        10.128.10.11#53
 
 Name:   ns1.net1.domain
-Address: 10.128.10.11
+address: 10.128.10.11
 > ns2
 Server:         10.128.10.11
-Address:        10.128.10.11#53
+address:        10.128.10.11#53
 
 Name:   ns2.net1.domain
-Address: 10.128.20.12
+address: 10.128.20.12
 > host1
 Server:         10.128.10.11
-Address:        10.128.10.11#53
+address:        10.128.10.11#53
 
 Name:   host1.net1.domain
-Address: 10.128.100.101
+address: 10.128.100.101
 > exit
 ```
 ## install
 - add admin user
-- set private IP Address with netmask ```255.255.0.0```
+- set private IP address with netmask ```255.255.0.0```
 - [Ansible](http://ansible.com)
     - install
     - configure host or network(s) of hosts by Ansible
@@ -55,7 +55,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 [How To Configure BIND as a private Network DNS Server on Ubuntu 18.04](http://digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04)
 ## hardware
 ### router
-| brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP Addresses |
+| brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP addresses |
 | --- | --- | --- | --- | --- |
 | [Linksys](http://linksys.com) | [EA6900](http://linksys.com/us/support-product?pid=01t80000003KdHUAA0) | AC 1900 | 1GB & WiFi | 192.168.1.0/32
 | [NETGEAR](http://netgear.com) | [WINDR4500](http://netgear.com/support/product/WNDR4500.aspx) | N900 | 1GB & WiFi | 10.128.0.0/16
@@ -66,7 +66,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 |  | EM4090 Rev 1 |
 |  | EM4090 Rev 2 |
 ### [PC](http://en.wikipedia.org/wiki/Personal_computer)
-| brand | series | model | CPU | memory (GB) | private IP Address |
+| brand | series | model | CPU | memory (GB) | private IP address |
 | --- | --- | --- | --- | --- | --- |
 | [HP](http://hp.com) | ProDesk | [600 G2 DM](http://support.hp.com/us-en/product/hp-prodesk-600-g2-desktop-mini-pc/8376393) | Core i7-6700T @ 2.80GHz * 8 | 32 | 10.128.10.11
 | [Intel](http://intel.com) | NUC | [5](http://intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC5i3RYK_NUC5i5RYK_UserGuide.pdf) | Pentium E6500 @ 2.93GHz * 2 | 4 | 10.128.20.12
