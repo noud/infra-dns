@@ -72,6 +72,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [Intel](http://intel.com) | NUC | [5](http://intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC5i3RYK_NUC5i5RYK_UserGuide.pdf) | Pentium E6500 @ 2.93GHz * 2 | 4 | 10.128.20.12
 | [Acer](http://acer.com) | Aspire | [Z5600](http://acer.com/ac/en/US/content/support-product/1243;-;AZ5600) | Celeron N3050 @ 1.60gHZ * 2 | 4 | 10.128.100.101
 | [Dell](http://dell.com) | Wyse | [3040](http://dell.com/support/manuals/nl/nl/nlbsdt1/wyse-3040-thin-client/3040_ug/welcome-to-dell-wyse-3040-thin-client?guid=guid-423f8ce2-8950-497f-88d3-22c2e1e3fe4a&lang=en-us) | Cherry Trail x5 Z-8350 @ 1.44 GHz * 4 | 2 |  |
+| [ASUS](http://asus.com) |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
 ### [USB](http://en.wikipedia.org/wiki/USB)
 | brand | item | name | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) | [EAN](http://en.wikipedia.org/wiki/International_Article_Number)
 | --- | --- | --- | --- | --- |
