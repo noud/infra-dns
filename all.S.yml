@@ -1,0 +1,58 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  roles:
+    - role: packages
+      vars:
+        package_name: DNS
+        packages:
+            - bind9
+            - bind9utils
+            - bind9-doc
+    - role: dns
+    - role: ns1
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    - role: dns-restart
+    - role: packages
+      vars:
+        package_name: SSH
+        packages:
+            - ssh
+    - role: packages
+      vars:
+        package_name: desktop
+        packages:
+            - chromium-browser
+            - evolution
+    - role: packages
+      when: ansible_facts['os_family'] == 'Debian'
+      vars:
+        package_name: APT
+        packages:
+            - software-properties-common
+            - apt-transport-https
+    - role: repo_apt_add
+      vars:
+        repo_name: vscode
+        repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
+        repo: https://packages.microsoft.com/repos/vscode
+    - role: packages
+      vars:
+        package_name: developer
+        packages:
+            - code
+    # - role: packages
+    #   vars:
+    #     package_name: mp4
+    #     packages:
+    #         - vlc
+    # - role: packages
+    #   vars:
+    #     package_name: pdf
+    #     packages:
+    #         - gimp
+    #         - inkscape
