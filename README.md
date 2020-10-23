@@ -90,6 +90,6 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | model |
 | --- | --- |
-| [Samsung](http://samsung.com) | [Galaxy Z Flip](http://samsung.com/us/mobile/galaxy-z-flip) |
+| [Samsung](http://samsung.com) | [Galaxy Z Flip](http://manuals-support.com/samsung-galaxy-z-flip-manual-user-guide) |
 .
 …WIP…
