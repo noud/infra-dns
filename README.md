@@ -82,12 +82,12 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [Dell](http://dell.com) | Wyse | [3040](http://dell.com/support/manuals/nl/nl/nlbsdt1/wyse-3040-thin-client/3040_ug/welcome-to-dell-wyse-3040-thin-client?guid=guid-423f8ce2-8950-497f-88d3-22c2e1e3fe4a&lang=en-us) | Cherry Trail x5 Z-8350 @ 1.44 GHz * 4 | 2 |  |
 | [ASUS](http://asus.com) |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
 ### [USB](http://en.wikipedia.org/wiki/USB)
-| brand | item | name | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) | [EAN](http://en.wikipedia.org/wiki/International_Article_Number) | serial |
-| --- | --- | --- | --- | --- | --- |
-| [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |  |  |  |
-| [sWeex](http://nedis.com) | [US600](http://) | EXTERNAL 4 PORT USB 2.0 |  |  | 090325000269 |
-| [Trust](http://trust.com) | [14251](http://trust.com/en/product/14251-4-port-mini-usb-2-0-design-hub-hu-3340m) | 4 Port Mini USB 2.0 |  | 8713439142518 |  |
-| [hama](http://hama.com) | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | USB 2.0 Multi Card Reader | 4007249553485 |  |  |
+| group| brand | item | name | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) | [EAN](http://en.wikipedia.org/wiki/International_Article_Number) | serial |
+| --- | --- | --- | --- | --- | --- | --- |
+|  | [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |  |  |  |
+| [nedis](http://nedis.com) | [sWeex](http://nedis.com) | [US600](http://) | EXTERNAL 4 PORT USB 2.0 |  |  | 090325000269 |
+|  | [Trust](http://trust.com) | [14251](http://trust.com/en/product/14251-4-port-mini-usb-2-0-design-hub-hu-3340m) | 4 Port Mini USB 2.0 |  | 8713439142518 |  |
+|  | [hama](http://hama.com) | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | USB 2.0 Multi Card Reader | 4007249553485 |  |  |
 ### [peripheral](http://en.wikipedia.org/wiki/Peripheral)
 | brand | model | what |
 | --- | --- | --- |
