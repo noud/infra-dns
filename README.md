@@ -99,7 +99,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### displays
 | brand | model | version | release |
 | --- | --- | --- | --- |
-| [Philips]() |  | Q581E-064.146 | 5/10/2007 11:03:58 |
+| [Philips CE](http://philips.nl) |  | Q581E-064.146 | 5/10/2007 11:03:58 |
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | model |
 | --- | --- |
