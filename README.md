@@ -55,7 +55,7 @@ ansible-vault create vault # edit, if you like
 # vault_psql_pass: postgres
 # vault_docker_hub_username: hub_user
 # vault_docker_hub_password: hub_secret
-ansible-playbook -i domain all.yml #--ask-vault-pass
+ansible-playbook -i domain all.yml --ask-vault-pass
 # on 10.128.100.101
 ./bin/install-config-host1.sh
 ```
@@ -96,6 +96,10 @@ ansible-playbook -i domain all.yml #--ask-vault-pass
 | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 | [Logitech](http://logitechg.com) | K520 | keyboard |
 |  | M310 | mouse |
+### displays
+| brand | model | version | release |
+| --- | --- | --- | --- |
+| [Philips]() |  | Q581E-064.146 | 5/10/2007 11:03:58 |
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | model |
 | --- | --- |
