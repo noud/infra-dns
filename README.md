@@ -47,7 +47,7 @@ sudo apt install -y ansible
 ansible-galaxy collection install ansible.posix
 # on 10.128.10.11
 ansible-vault create vault
-ansible-playbook -i domain all.yml --ask-vault-pass
+ansible-playbook -i domain all.yml #--ask-vault-pass
 # on 10.128.100.101
 ./bin/install-config-host1.sh
 ```
