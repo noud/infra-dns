@@ -84,7 +84,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | --- | --- | --- |
 | [Jabra](http://jabra.com) | [Talk 30](http://jabra.com/bluetooth-headsets/jabra-talk-30) | headset |
 | KAZO | Girly | powerbank |
-| [PEAQ](http://imtron.com) | [PPA20BT](http://peaq-online.com) | headset |
+| [PEAQ](http://imtron.com) | [PPA20BT](http://peaq-online.com/uploads/tx_fdproducts/PEAQ_Datenblatt_PPA20BT-SL.pdf) | headset |
 | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 | [Logitech](http://logitechg.com) | K520 | keyboard |
 |  | M310 | mouse |
