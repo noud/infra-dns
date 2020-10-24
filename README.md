@@ -46,7 +46,7 @@ address: 10.128.100.101
 sudo apt install -y ansible
 ansible-galaxy collection install ansible.posix
 # on 10.128.10.11
-ansible-vault create vault
+ansible-vault create vault # edit, if you like
 # example content
 # vault_server_user: super_user
 # vault_sudo_pass: secret
