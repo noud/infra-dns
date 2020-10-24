@@ -8,4 +8,4 @@ sudo systemctl enable bind9
 sudo systemctl start bind9
 
 sudo named-checkconf
-sudo ufw allow Bind9
+# sudo ufw allow Bind9
