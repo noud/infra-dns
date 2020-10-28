@@ -19,7 +19,7 @@
     # - role: dns-restart
     # - role: packages
     #   vars:
-    #     package_name: SSH
+    #     package_name: S/MIME & SSL
     #     packages:
     #         - ssh
     # - role: packages
