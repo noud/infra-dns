@@ -19,6 +19,12 @@
     # - role: dns-restart
     # - role: packages
     #   vars:
+    #     package_name: PGP/GPG/OpenPGP
+    #     packages:
+    #         - OpenPGP Applet
+    #         - constellation
+    # - role: packages
+    #   vars:
     #     package_name: S/MIME & SSL
     #     packages:
     #         - ssh
