@@ -99,8 +99,8 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 |  | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
 |  | [Logitech](http://logitechg.com) | K520 | keyboard |
 |  |  | M310 | mouse |
-| [RC-5](http://en.wikipedia.org/wiki/RC-5) |  | a | remote control |
-|  |  | b | " |
+| [RC-5](http://en.wikipedia.org/wiki/RC-5) | [PHILIPS](http://philips.com) | a | remote control |
+|  | " | b | " |
 ### displays
 | brand | model | version | release |
 | --- | --- | --- | --- |
