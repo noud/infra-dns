@@ -91,14 +91,16 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 |  | [Trust](http://trust.com) | [14251](http://trust.com/en/product/14251-4-port-mini-usb-2-0-design-hub-hu-3340m) | 4 Port Mini USB 2.0 |  | 8713439142518 |  |
 |  | [hama](http://hama.com) | [00055348](https://www.hama.com/00055348/hama-35in1-usb-20-multi-card-reader-blue) | USB 2.0 Multi Card Reader | 4007249553485 |  |  |
 ### [peripheral](http://en.wikipedia.org/wiki/Peripheral)
-| brand | model | what |
-| --- | --- | --- |
-| [Jabra](http://jabra.com) | [Talk 30](http://jabra.com/bluetooth-headsets/jabra-talk-30) | headset |
-| KAZO | Girly | powerbank |
-| [PEAQ](http://imtron.com) | [PPA20BT](http://peaq-online.com/uploads/tx_fdproducts/PEAQ_Datenblatt_PPA20BT-SL.pdf) | headset |
-| bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
-| [Logitech](http://logitechg.com) | K520 | keyboard |
-|  | M310 | mouse |
+| protocol | brand | model | what |
+| --- | --- | --- | --- |
+|  | [Jabra](http://jabra.com) | [Talk 30](http://jabra.com/bluetooth-headsets/jabra-talk-30) | headset |
+|  | KAZO | Girly | powerbank |
+|  | [PEAQ](http://imtron.com) | [PPA20BT](http://peaq-online.com/uploads/tx_fdproducts/PEAQ_Datenblatt_PPA20BT-SL.pdf) | headset |
+|  | bullet | Duck cylinder Bluetooth® speaker with rubber finish | speaker |
+|  | [Logitech](http://logitechg.com) | K520 | keyboard |
+|  |  | M310 | mouse |
+| [RC-5](http://en.wikipedia.org/wiki/RC-5) |  | a | remote control |
+|  |  | b | " |
 ### displays
 | brand | model | version | release |
 | --- | --- | --- | --- |
