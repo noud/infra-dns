@@ -76,8 +76,9 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### [PC](http://en.wikipedia.org/wiki/Personal_computer)
 | brand | series | model | CPU | memory (GB) | private IP address |
 | --- | --- | --- | --- | --- | --- |
+| [ASRock](http://asrock.com) |  | H61M-DGS | A64 |  | 
 | [ASUS](http://asus.com) |  |  | I386 |  | 
-| ASUS |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
+| " |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
 | [HISCOM]() |  | [HSP/300]() |  |  | 
 | [HP](http://hp.com) | ProDesk | [600 G2 DM](http://support.hp.com/us-en/product/hp-prodesk-600-g2-desktop-mini-pc/8376393) | Core i7-6700T @ 2.80GHz * 8 | 32 | 10.128.10.11
 | [Intel](http://intel.com) | NUC | [5](http://intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC5i3RYK_NUC5i5RYK_UserGuide.pdf) | Pentium E6500 @ 2.93GHz * 2 | 4 | 10.128.20.12
@@ -104,7 +105,8 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### displays
 | brand | model | version | release |
 | --- | --- | --- | --- |
-| [Philips CE](http://philips.nl) |  | Q581E-064.146 | 5/10/2007 11:03:58 |
+| [Philips CE](http://philips.nl) |  |  |  |
+| " |  | Q581E-064.146 | 5/10/2007 11:03:58 |
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | model |
 | --- | --- |

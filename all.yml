@@ -51,6 +51,7 @@
     #     package_name: developer
     #     packages:
     #         - code
+    #         - graphviz
     # - role: packages
     #   vars:
     #     package_name: mp4
