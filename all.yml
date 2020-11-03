@@ -51,7 +51,9 @@
     #     package_name: developer
     #     packages:
     #         - code
-    #         - graphviz
+    #         - cpp-dependencies
+# sudo snap install --classic cmake  # version 3.18.4, or
+# sudo apt  install cmake  # version 3.16.3-3ubuntu2    #         - graphviz
     # - role: packages
     #   vars:
     #     package_name: mp4
