@@ -76,8 +76,8 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### [PC](http://en.wikipedia.org/wiki/Personal_computer)
 | brand | series | model | CPU | memory (GB) | private IP address |
 | --- | --- | --- | --- | --- | --- |
-| [ASRock](http://asrock.com) |  | H61M-DGS | A64 |  | 
-| [ASUS](http://asus.com) |  |  | I386 |  | 
+| [ASRock](http://asrock.com) | H61M | [DGS](http://download.asrock.com/Manual/H61M-DGS.pdf) | a64 |  | 
+| " | 880GMH | [USB3](http://download.asrock.com/Manual/880GMHUSB3.pdf) | a64 |  | | [ASUS](http://asus.com) |  |  | I386 |  | 
 | " |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
 | [HISCOM]() |  | [HSP/300]() |  |  | 
 | [HP](http://hp.com) | ProDesk | [600 G2 DM](http://support.hp.com/us-en/product/hp-prodesk-600-g2-desktop-mini-pc/8376393) | Core i7-6700T @ 2.80GHz * 8 | 32 | 10.128.10.11
