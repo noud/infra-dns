@@ -62,6 +62,10 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ## inspired by
 [How To Configure BIND as a private Network DNS Server on Ubuntu 18.04](http://digitalocean.com/community/tutorials/how-to-configure-bind-as-a-private-network-dns-server-on-ubuntu-18-04)
 ## hardware
+### broadband
+| brand | model |
+| --- | --- |
+| [Sierra Wireless](http://sierrawireless.com) | [FX100](sierrawireless.com/products-and-solutions/embedded-solutions/programmable-iot-gateways-modems/) | 
 ### router
 | brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP addresses |
 | --- | --- | --- | --- | --- |
