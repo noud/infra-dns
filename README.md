@@ -65,7 +65,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### broadband
 | brand | model |
 | --- | --- |
-| [Sierra Wireless](http://sierrawireless.com) | [FX100](sierrawireless.com/products-and-solutions/embedded-solutions/programmable-iot-gateways-modems/) | 
+| [Sierra Wireless](http://sierrawireless.com) | [FX100](http://sierrawireless.com/products-and-solutions/embedded-solutions/programmable-iot-gateways-modems/) | 
 ### router
 | brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP addresses |
 | --- | --- | --- | --- | --- |
