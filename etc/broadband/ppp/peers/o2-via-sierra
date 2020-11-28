@@ -1,0 +1,50 @@
+-detach
+/dev/ttyUSB0
+460800
+debug
+#defaultroute
+usepeerdns
+
+noauth
+
+crtscts
+lock
+novj
+nobsdcomp
+nodeflate
+nopcomp
+connect '/usr/sbin/chat -v -t6 -f /etc/ppp/peers/gsm_chat'
+/etc/ppp/peers/gsm_chat:
+
+ABORT 'NO DIAL TONE' ABORT 'NO ANSWER' ABORT 'NO CARRIER' ABORT DELAYED
+
+SAY 'Initializing modem:\n'
+'' AT
+OK ATZ
+OK \c
+SAY 'OK\n'
+
+SAY "Checking PIN:\n"
+'' AT+CPIN?
+"+CPIN: READY" \c
+SAY "OK\n"
+
+SAY     'Setting APN:\n'
+# Access Point Name (APN) 
+# Incorrect APN or CGDCONT can often cause errors in connection.
+# Below are a bunch of different popular APNs
+
+#''     'AT+CGDCONT=0,"IP","proxy"'
+#''     'AT+CGDCONT=1,"IP","proxy"
+#''     'AT+CGDCONT=2,"IP","proxy"'
+#''     'AT+CGDCONT=0,"IP","ISP.CINGULAR"'
+#''     'AT+CGDCONT=1,"IP","ISP.CINGULAR"'
+#''     'AT+CGDCONT=2,"IP","ISP.CINGULAR"'
+''      AT+CGDCONT=1,"IP","mobile.o2.co.uk"
+OK \c
+SAY "OK\n"
+
+SAY     'Dialing...\n'
+OK ATD*99#
+CONNECT \c
+SAY "Connected.\n"

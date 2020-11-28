@@ -65,3 +65,10 @@
     #     packages:
     #         - gimp
     #         - inkscape
+    #   vars:
+    #     package_name: broadband
+    #     packages:
+    #         - cu
+    #         - nminicom
+    # snap install modem-manager
+    #  systemctl status snap.modem-manager.modemmanager.service 
