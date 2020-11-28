@@ -76,7 +76,8 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### [PC](http://en.wikipedia.org/wiki/Personal_computer)
 | brand | series | model | CPU | memory (GB) | private IP address |
 | --- | --- | --- | --- | --- | --- |
-| [ASRock](http://asrock.com) |  | H61M-DGS | A64 |  | 
+| [ASRock](http://asrock.com) | H61M | [DGS](http://download.asrock.com/Manual/H61M-DGS.pdf) | a64 |  | 
+| " | 880GMH | [USB3](http://download.asrock.com/Manual/880GMHUSB3.pdf) | a64 |  | 
 | [ASUS](http://asus.com) |  |  | I386 |  | 
 | " |  | [p5](http://asus.com/Motherboards/P5B_Deluxe) |  |  |
 | [HISCOM]() |  | [HSP/300]() |  |  | 
@@ -84,7 +85,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [Intel](http://intel.com) | NUC | [5](http://intel.com/content/dam/support/us/en/documents/mini-pcs/nuc-kits/NUC5i3RYK_NUC5i5RYK_UserGuide.pdf) | Pentium E6500 @ 2.93GHz * 2 | 4 | 10.128.20.12
 | [Acer](http://acer.com) | Aspire | [Z5600](http://acer.com/ac/en/US/content/support-product/1243;-;AZ5600) | Celeron N3050 @ 1.60gHZ * 2 | 4 | 10.128.100.101
 | [Dell](http://dell.com) | Wyse | [3040](http://dell.com/support/manuals/nl/nl/nlbsdt1/wyse-3040-thin-client/3040_ug/welcome-to-dell-wyse-3040-thin-client?guid=guid-423f8ce2-8950-497f-88d3-22c2e1e3fe4a&lang=en-us) | Cherry Trail x5 Z-8350 @ 1.44 GHz * 4 | 2 |  |
-### [USB](http://en.wikipedia.org/wiki/USB)
+### [USB](http://en.wikipedia.org/wiki/USB)s
 | group| brand | item | name | [GTIN](http://en.wikipedia.org/wiki/Global_Trade_Item_Number) | [EAN](http://en.wikipedia.org/wiki/International_Article_Number) | serial |
 | --- | --- | --- | --- | --- | --- | --- |
 |  | [Linkpro](http://linkpro.com.tw) | [USB-2204L](http://www.linkpro.com.tw/search_result.asp?keyin=USB-2204L&Search=Go) | 4 port USB Hub |  |  |  |
