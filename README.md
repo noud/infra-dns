@@ -65,7 +65,7 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 ### broadband
 | brand | model |
 | --- | --- |
-| [Sierra Wireless](http://sierrawireless.com) | [FX100](http://sierrawireless.com/products-and-solutions/embedded-solutions/programmable-iot-gateways-modems/) | 
+| [Sierra Wireless](http://sierrawireless.com) | [FX100](http://sierrawireless.com/products-and-solutions/embedded-solutions/programmable-iot-gateways-modems/) |
 ### router
 | brand | [SKU](http://en.wikipedia.org/wiki/Stock_keeping_unit) | alt | spec | IP addresses |
 | --- | --- | --- | --- | --- |
@@ -113,8 +113,9 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | [Philips CE](http://philips.nl) |  |  |  |
 | " |  | Q581E-064.146 | 5/10/2007 11:03:58 |
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
-| brand | model |
-| --- | --- |
-| [Samsung](http://samsung.com) | [Galaxy Z Flip](https://downloadcenter.samsung.com/content/UM/202002/20200214193732764/SM-F700F_DS_UM_EU_QQ_Eng_Rev.1.0_200214.pdf) |
+| brand | family | model |
+| --- | --- | --- |
+| [Motorola](http://motorola.com) | [moto e](http://motorola.com/nl/smartphones/moto-e-family) | [7 PLUS](http://motorola.com/nl/smartphones-moto-e-plus-gen-7/p) |
+| [Samsung](http://samsung.com) | [Galaxy](http://samsung.com/us/galaxy/why-galaxy/) | [Galaxy Z Flip](https://downloadcenter.samsung.com/content/UM/202002/20200214193732764/SM-F700F_DS_UM_EU_QQ_Eng_Rev.1.0_200214.pdf) |
 
 …WIP…
