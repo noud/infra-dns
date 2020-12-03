@@ -112,10 +112,19 @@ ansible-playbook -i domain all.yml --ask-vault-pass
 | --- | --- | --- | --- |
 | [Philips CE](http://philips.nl) |  |  |  |
 | " |  | Q581E-064.146 | 5/10/2007 11:03:58 |
+### [Point of Sale (POS)](http://en.wikipedia.org/wiki/Point_of_sale) [terminal](http://en.wikipedia.org/wiki/Payment_terminal)
+| brand | model |
+| --- | --- |
+| [Verifone](http://verifone.com) | [VX 820](http://verifone.com/en/us/devices/countertops-pin-pads/vx-820) |
+| " | [VX 520](http://verifone.com/sites/default/files/VX520_Manual_English.pdf) |
+### [building management system (BMS)](http://en.wikipedia.org/wiki/Building_management_system)
+| brand | model |
+| --- | --- |
+| [Johnson Controls](http://johnsoncontrols.com/) | [VA-7482-0011](http://cgproducts.johnsoncontrols.com/MET_PDF/34636771.PDF) |
+| " | [VA-7452-9001](http://cgproducts.johnsoncontrols.com/met_pdf/977324.pdf) |
 ### [smartphone](http://en.wikipedia.org/wiki/Smartphone)
 | brand | family | model |
 | --- | --- | --- |
 | [Motorola](http://motorola.com) | [moto e](http://motorola.com/nl/smartphones/moto-e-family) | [7 PLUS](http://motorola.com/nl/smartphones-moto-e-plus-gen-7/p) |
 | [Samsung](http://samsung.com) | [Galaxy](http://samsung.com/us/galaxy/why-galaxy/) | [Galaxy Z Flip](https://downloadcenter.samsung.com/content/UM/202002/20200214193732764/SM-F700F_DS_UM_EU_QQ_Eng_Rev.1.0_200214.pdf) |
-
 …WIP…
