@@ -17,58 +17,154 @@
     #   vars:
     #     interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
     # - role: dns-restart
-    # - role: packages
-    #   vars:
-    #     package_name: PGP/GPG/OpenPGP
-    #     packages:
-    #         - OpenPGP Applet
-    #         - constellation
-    # - role: packages
-    #   vars:
-    #     package_name: S/MIME & SSL
-    #     packages:
-    #         - ssh
-    # - role: packages
-    #   vars:
-    #     package_name: desktop
-    #     packages:
-    #         - chromium-browser
-    #         - evolution
-    # - role: packages
-    #   when: ansible_facts['os_family'] == 'Debian'
-    #   vars:
-    #     package_name: APT
-    #     packages:
-    #         - software-properties-common
-    #         - apt-transport-https
-    # - role: repo_apt_add
-    #   vars:
-    #     repo_name: vscode
-    #     repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
-    #     repo: https://packages.microsoft.com/repos/vscode
-    # - role: packages
-    #   vars:
-    #     package_name: developer
-    #     packages:
-    #         - code
-    #         - cpp-dependencies
+    - role: packages
+      vars:
+        package_name: PGP/GPG/OpenPGP
+        packages:
+            - OpenPGP Applet
+            - constellation
+    - role: packages
+      vars:
+        package_name: S/MIME & SSL
+        packages:
+           - inetutils-traceroute
+           - net-tools
+           - ssh
+    - role: packages
+      vars:
+        package_name: rsync
+        packages:
+           - rsync
+           - grsync
+    - role: packages
+      vars:
+        package_name: desktop
+        packages:
+            - chromium-browser
+            - chromium-codecs-ffmpeg-extra
+            - chromium-codecs-ffmpeg
+            - gstreamer1.0-plugins-base-apps
+            - gstreamer1.0-plugins-good
+            - gstreamer1.0-plugins-bad-apps
+            - gstreamer1.0-opencv
+            - gstreamer1.0-wpe
+            - gnome-twitch-player-backend-gstreamer-cairo
+            - gnome-twitch-player-backend-gstreamer-clutter
+            - gnome-twitch-player-backend-gstreamer-opengl
+            - evolution
+    - role: packages
+      vars:
+        package_name: libreoffice
+        packages:
+            - libreoffice
+            - libreoffice-base
+            - libreoffice-sdbc-mysql
+            - libreoffice-sdbc-postgresql
+            - libreoffice-evolution
+            - libreoffice-l10n-nl
+            - libreoffice-pdfimport
+            - libreoffice-dev-doc
+            - libreoffice-dev
+            - libreofficekit-data
+            - libreofficekit-dev
+            - libreoffice-avmedia-backend-gstreamer
+    - role: packages
+      vars:
+        package_name: desktop-gnome
+        packages:
+            - gnome
+    - role: packages-remove
+      vars:
+        package_name: desktop-gnome
+        packages:
+            - aisleriot
+            - five-or-more
+            - four-in-a-row
+            - gnome-klotski
+            - hitori
+            - gnome-mines
+            - gnome-nibbles
+            - gnome-robots
+            - gnome-sudoku
+            - gnome-taquin
+            - gnome-tetravex
+            - lightsoff
+            - quadrapassel
+            - swell-foop
+            - tali
+    - role: packages
+      vars:
+        package_name: IM
+        packages:
+            - pidgin
+      community.general.snap:
+        name:
+          - whatsdesk
+          - yakyak
+    - role: packages
+      community.general.snap:
+        name: skype
+        classic: yes
+    - role: packages
+      when: ansible_facts['os_family'] == 'Debian'
+      vars:
+        package_name: APT
+        packages:
+            - software-properties-common
+            - apt-transport-https
+    - role: repo_apt_add
+      vars:
+        repo_name: vscode
+        repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
+        repo: https://packages.microsoft.com/repos/vscode
+    - role: packages
+      vars:
+        package_name: developer
+        packages:
+            - code
+#            - cpp-dependencies
+            - graphviz
+      community.general.snap:
+        name:
+          - cmake
 # sudo snap install --classic cmake  # version 3.18.4, or
-# sudo apt  install cmake  # version 3.16.3-3ubuntu2    #         - graphviz
-    # - role: packages
-    #   vars:
-    #     package_name: mp4
-    #     packages:
-    #         - vlc
-    # - role: packages
-    #   vars:
-    #     package_name: pdf
-    #     packages:
-    #         - gimp
-    #         - inkscape
-    #   vars:
-    #     package_name: broadband
-    #     packages:
-    #         - cu
-    #         - nminicom
-    # snap install modem-manager
+# sudo apt  install cmake  # version 3.16.3-3ubuntu2    
+    - role: packages
+      vars:
+        package_name: kernel-developer
+        packages:
+            # - linux-headers-$(uname -r)
+            - ncurses-dev
+            # - kernel-package
+            # - qt4-dev-tools
+            - pkg-config
+            - build-essential
+    # make menuconfig and make xconfig
+    - role: packages
+      vars:
+        package_name: mp4
+        packages:
+            - vlc
+            - ubuntu-restricted-extras
+    - role: packages
+      vars:
+        package_name: pdf
+        packages:
+            - gimp
+            - inkscape
+    - role: packages
+      vars:
+        package_name: broadband
+        packages:
+            - cu
+            - minicom
+      community.general.snap:
+        name:
+          - modem-manager
     #  systemctl status snap.modem-manager.modemmanager.service 
+    
+    # sudo apt install pythonpy
+
+    # sudo pip install pythonpy libusb1
+    # echo "alias py='pythonpy'" >> ~/.bashrc
+    # /home/noud/.local/bin/py:16: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.9 it will stop working
