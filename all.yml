@@ -11,18 +11,18 @@
             - bind9
             - bind9utils
             - bind9-doc
-    # - role: dns
-    # - role: ns1
-    #   # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
-    #   vars:
-    #     interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-    # - role: dns-restart
+    - role: dns
+    - role: ns1
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    - role: dns-restart
     - role: packages
       vars:
         package_name: PGP/GPG/OpenPGP
         packages:
-            - OpenPGP Applet
-            - constellation
+            # - OpenPGP Applet
+            # - constellation
     - role: packages
       vars:
         package_name: S/MIME & SSL
@@ -41,17 +41,22 @@
         package_name: desktop
         packages:
             - chromium-browser
-            - chromium-codecs-ffmpeg-extra
-            - chromium-codecs-ffmpeg
-            - gstreamer1.0-plugins-base-apps
-            - gstreamer1.0-plugins-good
-            - gstreamer1.0-plugins-bad-apps
-            - gstreamer1.0-opencv
-            - gstreamer1.0-wpe
-            - gnome-twitch-player-backend-gstreamer-cairo
-            - gnome-twitch-player-backend-gstreamer-clutter
-            - gnome-twitch-player-backend-gstreamer-opengl
             - evolution
+            - thunderbird
+    # - role: packages
+    #   vars:
+    #     package_name: desktop-codecses
+    #     packages:
+    #         - chromium-codecs-ffmpeg-extra
+    #         - chromium-codecs-ffmpeg
+    #         - gstreamer1.0-plugins-base-apps
+    #         - gstreamer1.0-plugins-good
+    #         - gstreamer1.0-plugins-bad-apps
+    #         - gstreamer1.0-opencv
+    #         - gstreamer1.0-wpe
+    #         - gnome-twitch-player-backend-gstreamer-cairo
+    #         - gnome-twitch-player-backend-gstreamer-clutter
+    #         - gnome-twitch-player-backend-gstreamer-opengl
     - role: packages
       vars:
         package_name: libreoffice
@@ -73,9 +78,21 @@
         package_name: desktop-gnome
         packages:
             - gnome
+            - gnome-shell
+            - unzip
+            - gnome-shell-extension-gsconnect
+            - gnome-shell-extensions
+            - gnome-shell-extension-prefs
+            - chrome-gnome-shell
+            # - apt-update-indicator
+            # - cpu-power-manager
+            # - extensions
+            # - openweather
+            # - internet-radio
+            # - netspeed
     - role: packages-remove
       vars:
-        package_name: desktop-gnome
+        package_name: desktop-gnome-remove-games
         packages:
             - aisleriot
             - five-or-more
@@ -127,8 +144,6 @@
       community.general.snap:
         name:
           - cmake
-# sudo snap install --classic cmake  # version 3.18.4, or
-# sudo apt  install cmake  # version 3.16.3-3ubuntu2    
     - role: packages
       vars:
         package_name: kernel-developer
@@ -161,6 +176,7 @@
       community.general.snap:
         name:
           - modem-manager
+    - role: docker-compose
     #  systemctl status snap.modem-manager.modemmanager.service 
     
     # sudo apt install pythonpy
