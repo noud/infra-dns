@@ -1,7 +1,7 @@
 network:
     version: 2
     ethernets:
-        enx0040f4a613c7:                      # Private network interface
+        enx0040f4973f9a:                      # Private network interface
             nameservers:
                 addresses:
                 - 10.128.10.11                # Private IP for ns1

@@ -12,6 +12,27 @@
             - bind9utils
             - bind9-doc
     - role: dns
+    - role: netplan
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        dns_zone: net1.domain
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f498cffb
+        interface_ip: 10.128.10.11
+        interface_mask: 16
+        ns1_ip: 10.128.10.11
+        ns2_ip: 10.128.20.12
+    # - role: netplan
+    #   # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.20.12'
+    #   vars:
+    #     dns_zone: net1.domain
+    #     interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+    #     interface_no: enx0040f4973f9a
+    #     interface_no: enx0040f4a613c7
+    #     interface_ip: 10.128.20.12
+    #     interface_mask: 16
+    #     ns1_ip: 10.128.10.11
+    #     ns2_ip: 10.128.20.12
     - role: ns1
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
@@ -25,10 +46,18 @@
             # - constellation
     - role: packages
       vars:
-        package_name: S/MIME & SSL
+        package_name: network tools
         packages:
            - inetutils-traceroute
            - net-tools
+           - ethtool
+           - gnome-network-admin
+           - network-manager
+           - network-manager-gnome
+    - role: packages
+      vars:
+        package_name: S/MIME & SSL
+        packages:
            - ssh
     - role: packages
       vars:

@@ -1,0 +1,17 @@
+- name: Install private nameservers
+  template: 
+    src: "etc/netplan/00-private-nameservers.yaml" 
+    dest: "/etc/netplan/"
+- name: Install static address
+  template: 
+    src: "etc/netplan/02-static-address.yaml" 
+    dest: "/etc/netplan/"
+- name: Netplan apply
+  shell: netplan apply
+  ignore_errors: yes
+  args:
+    warn: no
+  # args:
+  #   executable: /bin/sh
+# - name: set speed
+  # sudo ethtool -s ${ethernetName} speed 100 duplex full autoneg on

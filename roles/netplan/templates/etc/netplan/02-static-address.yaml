@@ -1,0 +1,6 @@
+network:
+    version: 2
+    ethernets:
+        ${ethernetName}:                      # Private network interface
+            addresses:
+                - ${interface_ip}/${interface_mask}
