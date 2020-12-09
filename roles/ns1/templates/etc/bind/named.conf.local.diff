@@ -7,11 +7,11 @@
 +zone "net1.domain" {
 +    type slave;
 +    file "db.net1.domain";
-+    masters { 10.128.10.11; };  # ns1 private IP
++    masters { {{ns1_ip}}; };  # ns1 private IP
 +};
 +
 +zone "128.10.in-addr.arpa" {
 +    type slave;
 +    file "db.10.128";
-+    masters { 10.128.10.11; };  # ns1 private IP
++    masters { {{ns1_ip}}; };  # ns1 private IP
 +};

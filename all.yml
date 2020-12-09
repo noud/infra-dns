@@ -13,6 +13,7 @@
             - bind9-doc
     - role: dns
     - role: netplan
+      when: inventory_hostname == "localhost"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
         dns_zone: net1.domain
@@ -22,21 +23,32 @@
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
-    # - role: netplan
-    #   # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.20.12'
-    #   vars:
-    #     dns_zone: net1.domain
-    #     interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-    #     interface_no: enx0040f4973f9a
-    #     interface_no: enx0040f4a613c7
-    #     interface_ip: 10.128.20.12
-    #     interface_mask: 16
-    #     ns1_ip: 10.128.10.11
-    #     ns2_ip: 10.128.20.12
+    - role: netplan
+      when: inventory_hostname == "ns2"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.20.12'
+      vars:
+        dns_zone: net1.domain
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f4973f9a
+        # interface_no: enx0040f4a613c7
+        interface_ip: 10.128.20.12
+        interface_mask: 16
+        ns1_ip: 10.128.10.11
+        ns2_ip: 10.128.20.12
     - role: ns1
+      when: inventory_hostname == "localhost"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
-        interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f498cffb
+        ns1_ip: 10.128.10.11
+    - role: ns2
+      when: inventory_hostname == "ns2"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f4973f9a
+        ns1_ip: 10.128.10.11
     - role: dns-restart
     - role: packages
       vars:
@@ -72,20 +84,21 @@
             - chromium-browser
             - evolution
             - thunderbird
-    # - role: packages
-    #   vars:
-    #     package_name: desktop-codecses
-    #     packages:
-    #         - chromium-codecs-ffmpeg-extra
-    #         - chromium-codecs-ffmpeg
-    #         - gstreamer1.0-plugins-base-apps
-    #         - gstreamer1.0-plugins-good
-    #         - gstreamer1.0-plugins-bad-apps
-    #         - gstreamer1.0-opencv
-    #         - gstreamer1.0-wpe
-    #         - gnome-twitch-player-backend-gstreamer-cairo
-    #         - gnome-twitch-player-backend-gstreamer-clutter
-    #         - gnome-twitch-player-backend-gstreamer-opengl
+    - role: packages
+      when: inventory_hostname == "localhost"
+      vars:
+        package_name: desktop-codecses
+        packages:
+            - chromium-codecs-ffmpeg-extra
+            - chromium-codecs-ffmpeg
+            - gstreamer1.0-plugins-base-apps
+            - gstreamer1.0-plugins-good
+            - gstreamer1.0-plugins-bad-apps
+            - gstreamer1.0-opencv
+            - gstreamer1.0-wpe
+            - gnome-twitch-player-backend-gstreamer-cairo
+            - gnome-twitch-player-backend-gstreamer-clutter
+            - gnome-twitch-player-backend-gstreamer-opengl
     - role: packages
       vars:
         package_name: libreoffice
