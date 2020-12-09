@@ -11,6 +11,12 @@
   ignore_errors: yes
   args:
     warn: no
+- name: start NetworkManager service
+  # sudo: yes
+  service:
+    name: NetworkManager.service
+    state: started
+    # use: service
   # args:
   #   executable: /bin/sh
 # - name: set speed

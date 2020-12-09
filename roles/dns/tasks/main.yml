@@ -12,8 +12,8 @@
   template: 
     src: "etc/bind/named.conf.options.diff" 
     dest: "/tmp/named.conf.options.diff"
-    vars:
-      interface_no: enx0040f498cffb
+    # vars:
+    #   interface_no: enx0040f498cffb
 - name: and patch add machines to DNS
   ansible.posix.patch:
     src: /tmp/named.conf.options.diff

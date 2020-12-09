@@ -1,6 +1,6 @@
 network:
     version: 2
     ethernets:
-        ${ethernetName}:                      # Private network interface
+        {{interface_no}}:                      # Private network interface
             addresses:
-                - ${interface_ip}/${interface_mask}
+                - {{interface_ip}}/{{interface_mask}}

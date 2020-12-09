@@ -1,9 +1,9 @@
 network:
     version: 2
     ethernets:
-        ${ethernetName}:                      # Private network interface
+        {{interface_no}}:                      # Private network interface
             nameservers:
                 addresses:
-                - ${ns1_ip}                # Private IP for ns1
-                - ${ns2_ip}                # Private IP for ns2
-                search: [ ${dns_zone} ]       # DNS zone
+                - {{ns1_ip}}                # Private IP for ns1
+                - {{ns2_ip}}                # Private IP for ns2
+                search: [ {{dns_zone}} ]       # DNS zone
