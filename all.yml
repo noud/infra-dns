@@ -175,11 +175,19 @@
           - id: 1166 # extension-update-notifier
           - id: 750 # openweather
           - id: 836 # internet-radio
+          - id: 154 # gmail-notify
           - id: 1247 # gnome-radio
+          - id: 336 # hardware-sensors-indicator
           - id: 921 # multi-monitors-add-on
           - id: 104 # netspeed
+          - id: 1505 # new-mail-indicator
+          - id: 214 # pidgin-conversation-integration
+          - id: 170 # pidgin-peristent-notification
+          - id: 473 # remmina-search-provider
+          - id: 430 # shell-utilities
           - id: 941 # show-ip
           - id: 906 # sound-output-device-chooser
+          - id: 73 # ssh-search-provider
           - id: 9 # systemmonitor
           - id: 365 # transmission-daemon-indicator
         gnome_dconf:
