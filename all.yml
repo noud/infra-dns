@@ -166,13 +166,22 @@
       vars:
         gnome_user: noud
         gnome_extensions:
+          - id: 1139 # apt-update-indicator
           - id: 2197 # new-apt-update-indicator
           - id: 945 # cpu-power-manager
+          - id: 82 # cpu-temperature-indicator
+          - id: 307 # dash-to-dock
           - id: 1036 # extensions
+          - id: 1166 # extension-update-notifier
           - id: 750 # openweather
           - id: 836 # internet-radio
           - id: 1247 # gnome-radio
+          - id: 921 # multi-monitors-add-on
           - id: 104 # netspeed
+          - id: 941 # show-ip
+          - id: 906 # sound-output-device-chooser
+          - id: 9 # systemmonitor
+          - id: 365 # transmission-daemon-indicator
         gnome_dconf:
           - key: /org/gnome/desktop/background/show-desktop-icons
             value: "true"
