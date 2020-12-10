@@ -167,7 +167,7 @@
         gnome_user: noud
         gnome_extensions:
           - id: 1139 # apt-update-indicator
-          - id: 2197 # new-apt-update-indicator
+          # - id: 2197 # new-apt-update-indicator
           - id: 945 # cpu-power-manager
           - id: 82 # cpu-temperature-indicator
           - id: 307 # dash-to-dock
@@ -176,7 +176,7 @@
           - id: 750 # openweather
           - id: 836 # internet-radio
           - id: 154 # gmail-notify
-          - id: 1247 # gnome-radio
+          # - id: 1247 # gnome-radio
           - id: 336 # hardware-sensors-indicator
           - id: 921 # multi-monitors-add-on
           - id: 104 # netspeed
