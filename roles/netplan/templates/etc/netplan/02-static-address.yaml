@@ -4,7 +4,7 @@ network:
         {{interface_no}}:                      # Private network interface
             addresses:
                 - {{interface_ip}}/{{interface_mask}}
-            gateway4: {{ns1_ip}}
+            gateway4: {{interface_ip}}
             routes:
                 - to: {{ns1_ip}}/{{interface_mask}}
                   via: {{interface_ip}}
