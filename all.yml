@@ -12,6 +12,20 @@
             - bind9utils
             - bind9-doc
     - role: dns
+    - role: ns1
+      when: inventory_hostname == "127.0.0.1"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f498cffb
+        ns1_ip: 10.128.10.11
+    - role: ns2
+      when: inventory_hostname == "ns2"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f4973f9a
+        ns1_ip: 10.128.10.11
     - role: netplan
       when: inventory_hostname == "127.0.0.1"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
@@ -35,21 +49,21 @@
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
-    - role: ns1
+    - role: dns-restart
+    - role: resolv
       when: inventory_hostname == "127.0.0.1"
-      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
-        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        dns_zone: net1.domain
         interface_no: enx0040f498cffb
         ns1_ip: 10.128.10.11
-    - role: ns2
+        ns2_ip: 10.128.20.12
+    - role: resolv
       when: inventory_hostname == "ns2"
-      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
-        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        dns_zone: net1.domain
         interface_no: enx0040f4973f9a
         ns1_ip: 10.128.10.11
-    - role: dns-restart
+        ns2_ip: 10.128.20.12
     - role: packages
       vars:
         package_name: PGP/GPG/OpenPGP
@@ -126,12 +140,6 @@
             - gnome-shell-extensions
             - gnome-shell-extension-prefs
             - chrome-gnome-shell
-            # - apt-update-indicator
-            # - cpu-power-manager
-            # - extensions
-            # - openweather
-            # - internet-radio
-            # - netspeed
     - role: packages-remove
       vars:
         package_name: desktop-gnome-remove-games
@@ -151,6 +159,18 @@
             - quadrapassel
             - swell-foop
             - tali
+    # @todo install following role
+    - role: PeterMosmans.customize-gnome
+      vars:
+        gnome_user: noud
+        gnome_extensions:
+          - id: 2197 # new-apt-update-indicator
+          - id: 945 # cpu-power-manager
+          - id: 1036 # extensions
+          - id: 750 # openweather
+          - id: 836 # internet-radio
+          - id: 1247 # gnome-radio
+          - id: 104 # netspeed
     - role: packages
       vars:
         package_name: IM
@@ -197,6 +217,14 @@
             - pkg-config
             - build-essential
     # make menuconfig and make xconfig
+    - role: packages
+      vars:
+        package_name: ansible-developer
+        packages:
+            - build-essential
+            - libssl-dev
+            - libffi-dev
+            - python3-dev
     - role: packages
       vars:
         package_name: mp4
