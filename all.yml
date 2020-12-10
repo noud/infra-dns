@@ -13,7 +13,7 @@
             - bind9-doc
     - role: dns
     - role: ns1
-      when: inventory_hostname == "127.0.0.1"
+      when: inventory_hostname == "ns1"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
         # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
@@ -27,7 +27,7 @@
         interface_no: enx0040f4973f9a
         ns1_ip: 10.128.10.11
     - role: netplan
-      when: inventory_hostname == "127.0.0.1"
+      when: inventory_hostname == "ns1"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
       vars:
         dns_zone: net1.domain
@@ -51,7 +51,7 @@
         ns2_ip: 10.128.20.12
     - role: dns-restart
     # - role: resolv
-    #   when: inventory_hostname == "127.0.0.1"
+    #   when: inventory_hostname == "ns1"
     #   vars:
     #     dns_zone: net1.domain
     #     interface_no: enx0040f498cffb
@@ -100,7 +100,7 @@
             - evolution
             - thunderbird
     - role: packages
-      when: inventory_hostname == "127.0.0.1"
+      when: inventory_hostname == "ns1"
       vars:
         package_name: desktop-codecses
         packages:
