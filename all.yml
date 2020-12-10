@@ -80,6 +80,7 @@
            - gnome-network-admin
            - network-manager
            - network-manager-gnome
+          #  nm-connection-editor
     - role: packages
       vars:
         package_name: S/MIME & SSL
