@@ -133,12 +133,14 @@
       vars:
         package_name: desktop-gnome
         packages:
+            - unzip
             - gnome
             - gnome-shell
-            - unzip
-            - gnome-shell-extension-gsconnect
             - gnome-shell-extensions
             - gnome-shell-extension-prefs
+            - gnome-shell-extension-autohidetopbar
+            - gnome-shell-extension-gsconnect
+            # - gnome-shell-extension-openweather
             - chrome-gnome-shell
     - role: packages-remove
       vars:
@@ -171,6 +173,13 @@
           - id: 836 # internet-radio
           - id: 1247 # gnome-radio
           - id: 104 # netspeed
+        gnome_dconf:
+          - key: /org/gnome/desktop/background/show-desktop-icons
+            value: "true"
+          - key: /org/gnome/shell/development-tools
+            value: "true"
+          # - key: /org/gnome/shell/enabled-extensions
+          #   value: ['new-apt-update-indicator@hamburgerjungejr', 'cpupower@mko-sl.de', 'extensions@abteil.org', 'openweather-extension@jenslody.de', 'radio@hslbck.gmail.com', 'gnome-radio@gnome-shell-exstensions.fffilo.github.com', 'netspeed@hedayaty.gmail.com']
     - role: packages
       vars:
         package_name: IM
