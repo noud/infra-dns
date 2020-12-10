@@ -4,3 +4,9 @@ network:
         {{interface_no}}:                      # Private network interface
             addresses:
                 - {{interface_ip}}/{{interface_mask}}
+            gateway4: {{ns1_ip}}}
+            routes:
+                - to: {{ns1_ip}}}/{{interface_mask}}
+                  via: {{interface_ip}}}
+                  metric: 200
+            # renderer: networkd
