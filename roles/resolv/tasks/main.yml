@@ -1,0 +1,4 @@
+- name: Install resolv.conf
+  template: 
+    src: "etc/resolv.conf" 
+    dest: "/etc/"
