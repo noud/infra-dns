@@ -50,20 +50,20 @@
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
     - role: dns-restart
-    - role: resolv
-      when: inventory_hostname == "127.0.0.1"
-      vars:
-        dns_zone: net1.domain
-        interface_no: enx0040f498cffb
-        ns1_ip: 10.128.10.11
-        ns2_ip: 10.128.20.12
-    - role: resolv
-      when: inventory_hostname == "ns2"
-      vars:
-        dns_zone: net1.domain
-        interface_no: enx0040f4973f9a
-        ns1_ip: 10.128.10.11
-        ns2_ip: 10.128.20.12
+    # - role: resolv
+    #   when: inventory_hostname == "127.0.0.1"
+    #   vars:
+    #     dns_zone: net1.domain
+    #     interface_no: enx0040f498cffb
+    #     ns1_ip: 10.128.10.11
+    #     ns2_ip: 10.128.20.12
+    # - role: resolv
+    #   when: inventory_hostname == "ns2"
+    #   vars:
+    #     dns_zone: net1.domain
+    #     interface_no: enx0040f4973f9a
+    #     ns1_ip: 10.128.10.11
+    #     ns2_ip: 10.128.20.12
     - role: packages
       vars:
         package_name: PGP/GPG/OpenPGP
