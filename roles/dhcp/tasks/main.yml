@@ -1,0 +1,4 @@
+- name: Install dhcpd.conf
+  template: 
+    src: "etc/dhcpd.conf" 
+    dest: "/etc/dhcp/"

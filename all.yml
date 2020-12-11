@@ -49,21 +49,33 @@
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
-    - role: dns-restart
-    # - role: resolv
-    #   when: inventory_hostname == "ns1"
-    #   vars:
-    #     dns_zone: net1.domain
-    #     interface_no: enx0040f498cffb
-    #     ns1_ip: 10.128.10.11
-    #     ns2_ip: 10.128.20.12
-    # - role: resolv
-    #   when: inventory_hostname == "ns2"
-    #   vars:
-    #     dns_zone: net1.domain
-    #     interface_no: enx0040f4973f9a
-    #     ns1_ip: 10.128.10.11
-    #     ns2_ip: 10.128.20.12
+    - role: service-restart
+      vars:
+        service: bind9
+    - role: packages
+      vars:
+        package_name: DHCP
+        packages:
+            - isc-dhcp-server
+    - role: dhcp
+      when: inventory_hostname == "ns1"
+    - role: service-restart
+      vars:
+        service: isc-dhcp-server.service
+    - role: resolv
+      when: inventory_hostname == "ns1"
+      vars:
+        dns_zone: net1.domain
+        interface_no: enx0040f498cffb
+        ns1_ip: 10.128.10.11
+        ns2_ip: 10.128.20.12
+    - role: resolv
+      when: inventory_hostname == "ns2"
+      vars:
+        dns_zone: net1.domain
+        interface_no: enx0040f4973f9a
+        ns1_ip: 10.128.10.11
+        ns2_ip: 10.128.20.12
     - role: packages
       vars:
         package_name: PGP/GPG/OpenPGP
@@ -94,9 +106,15 @@
            - grsync
     - role: packages
       vars:
-        package_name: desktop
+        package_name: desktop-chromium
         packages:
             - chromium-browser
+            - chromium-codecs-ffmpeg
+            - chromium-codecs-ffmpeg-extra
+    - role: packages
+      vars:
+        package_name: desktop-email
+        packages:
             - evolution
             - thunderbird
     - role: packages
@@ -104,13 +122,20 @@
       vars:
         package_name: desktop-codecses
         packages:
-            - chromium-codecs-ffmpeg-extra
-            - chromium-codecs-ffmpeg
+            - gstreamer1.0-libav
+            - gstreamer1.0-opencv
+            - gstreamer1.0-plugins-bad-apps
+            - gstreamer1.0-plugins-base
             - gstreamer1.0-plugins-base-apps
             - gstreamer1.0-plugins-good
-            - gstreamer1.0-plugins-bad-apps
-            - gstreamer1.0-opencv
+            - gstreamer1.0-plugins-ugly
+            - gstreamer1.0-tools
             - gstreamer1.0-wpe
+    - role: packages
+      when: inventory_hostname == "ns1"
+      vars:
+        package_name: desktop-twitch-codecses
+        packages:
             - gnome-twitch-player-backend-gstreamer-cairo
             - gnome-twitch-player-backend-gstreamer-clutter
             - gnome-twitch-player-backend-gstreamer-opengl
@@ -141,7 +166,6 @@
             - gnome-shell-extension-prefs
             - gnome-shell-extension-autohidetopbar
             - gnome-shell-extension-gsconnect
-            # - gnome-shell-extension-openweather
             - chrome-gnome-shell
     - role: packages-remove
       vars:
@@ -252,6 +276,32 @@
             - libssl-dev
             - libffi-dev
             - python3-dev
+    - role: repo_apt_add
+      vars:
+        repo_name: yarnpkg
+        repo_key_url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        repo: https://dl.yarnpkg.com/debian/
+    - role: packages
+      vars:
+        package_name: node-developer
+        packages:
+            - nodejs
+            - npm
+            - yarn
+    - role: packages
+      vars:
+        package_name: php-developer
+        packages:
+            - composer
+            - php-common
+            - php-curl
+            - php-dom
+            - php-gd
+            - php-json
+            - php-mbstring
+            - php-mysql
+            - php-xml
+            - php-zip
     - role: packages
       vars:
         package_name: mp4
