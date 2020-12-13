@@ -34,6 +34,7 @@
         # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
         interface_no: enx0040f498cffb
         interface_ip: 10.128.10.11
+        interface2_ip: 10.128.20.12
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
@@ -46,6 +47,7 @@
         interface_no: enx0040f4973f9a
         # interface_no: enx0040f4a613c7
         interface_ip: 10.128.20.12
+        interface2_ip: 10.128.10.11
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
@@ -97,7 +99,9 @@
       vars:
         package_name: S/MIME & SSL
         packages:
-           - ssh
+           - openssh-server
+# ssh-keygen
+# ssh-copy-id remote_username@server_ip_address
     - role: packages
       vars:
         package_name: rsync
