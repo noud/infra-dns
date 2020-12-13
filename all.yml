@@ -3,29 +3,8 @@
   become: yes
   vars_files:
     - [ "vars.yml" ]
+  ignore_errors: yes
   roles:
-    - role: packages
-      vars:
-        package_name: DNS
-        packages:
-            - bind9
-            - bind9utils
-            - bind9-doc
-    - role: dns
-    - role: ns1
-      when: inventory_hostname == "ns1"
-      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
-      vars:
-        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-        interface_no: enx0040f498cffb
-        ns1_ip: 10.128.10.11
-    - role: ns2
-      when: inventory_hostname == "ns2"
-      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
-      vars:
-        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
-        interface_no: enx0040f4973f9a
-        ns1_ip: 10.128.10.11
     - role: netplan
       when: inventory_hostname == "ns1"
       # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
@@ -51,6 +30,28 @@
         interface_mask: 16
         ns1_ip: 10.128.10.11
         ns2_ip: 10.128.20.12
+    - role: packages
+      vars:
+        package_name: DNS
+        packages:
+            - bind9
+            - bind9utils
+            - bind9-doc
+    - role: dns
+    - role: ns1
+      when: inventory_hostname == "ns1"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f498cffb
+        ns2_ip: 10.128.20.12
+    - role: ns2
+      when: inventory_hostname == "ns2"
+      # when: hostvars[inventory_hostname]['ansible_default_ipv4']['address'] == '10.128.10.11'
+      vars:
+        # interface_no: hostvars[inventory_hostname]['ansible_default_ipv4']['address']
+        interface_no: enx0040f4973f9a
+        ns1_ip: 10.128.10.11
     - role: service-restart
       vars:
         service: bind9
@@ -190,7 +191,13 @@
             - quadrapassel
             - swell-foop
             - tali
-    # @todo install following role
+    # @todo want to add role on the fly
+    # - role: git
+    #   vars:
+    #     repo: https://github.com/PeterMosmans/ansible-role-customize-gnome.git
+    #     repo_dir: /home/noud/.ansible/roles
+    #     repo_name: ansible-role-customize-gnome
+    #     repo_dir_name: PeterMosmans.customize-gnome
     - role: PeterMosmans.customize-gnome
       vars:
         gnome_user: noud

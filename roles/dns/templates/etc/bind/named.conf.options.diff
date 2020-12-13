@@ -15,8 +15,8 @@
 +	allow-recursion { trusted; };  # allows recursive queries from "trusted" clients
 +	listen-on { {{ns1_ip}}; };   # ns1 private IP address - listen on private network only
 +	allow-transfer { none; };      # disable zone transfers by default
-+   dnssec-enable yes;
-+   dnssec-validation yes;
++   #dnssec-enable yes;
++   #dnssec-validation yes;
 +
 +	forwarders {
 +		8.8.8.8;
