@@ -1,0 +1,39 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      when: ansible_facts['os_family'] == 'Debian'
+      vars:
+        package_name: APT
+        packages:
+            - apt-transport-https
+            - ca-certificates
+            # - curl
+            - gnupg-agent
+            - software-properties-common
+    - role: repo_apt_add
+      vars:
+        repo_name: docker
+        repo_key_url: https://download.docker.com/linux/ubuntu/gpg
+        repo: https://download.docker.com/linux/ubuntu
+    - role: packages
+      vars:
+        package_name: docker
+        packages:
+            - docker-ce
+            - docker-ce-cli
+            - containerd.io
+    - role: user-to-group
+      vars:
+        group: docker
+        user: "{{sudo_user}}"
+    - role: packages
+      vars:
+        package_name: Python
+        packages:
+            - python3-distutils
+            - python3-pip
