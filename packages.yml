@@ -5,41 +5,41 @@
     - [ "vars.yml" ]
   ignore_errors: yes
   roles:
-#     - role: packages
-#       vars:
-#         package_name: disk utils
-#         packages:
-#             - gsmartcontrol
-#             - usb-creator-gtk
-#     - role: packages
-#       vars:
-#         package_name: DNS
-#         packages:
-#             - bind9
-#             - bind9utils
-#             - bind9-doc
-#     - role: packages
-#       vars:
-#         package_name: DHCP
-#         packages:
-#             - isc-dhcp-server
-#     - role: packages
-#       vars:
-#         package_name: PGP/GPG/OpenPGP
-#         packages:
-#             # - OpenPGP Applet
-#             # - constellation
-#     - role: packages
-#       vars:
-#         package_name: network tools
-#         packages:
-#            - inetutils-traceroute
-#            - net-tools
-#            - ethtool
-#            - gnome-network-admin
-#            - network-manager
-#            - network-manager-gnome
-#           #  nm-connection-editor
+    - role: packages
+      vars:
+        package_name: disk utils
+        packages:
+            - gsmartcontrol
+            - usb-creator-gtk
+    - role: packages
+      vars:
+        package_name: DNS
+        packages:
+            - bind9
+            - bind9utils
+            - bind9-doc
+    - role: packages
+      vars:
+        package_name: DHCP
+        packages:
+            - isc-dhcp-server
+    - role: packages
+      vars:
+        package_name: PGP/GPG/OpenPGP
+        packages:
+            # - OpenPGP Applet
+            # - constellation
+    - role: packages
+      vars:
+        package_name: network tools
+        packages:
+           - inetutils-traceroute
+           - net-tools
+           - ethtool
+           - gnome-network-admin
+           - network-manager
+           - network-manager-gnome
+          #  nm-connection-editor
     - role: packages
       vars:
         package_name: Remote Desktop Protocol (RDP)
@@ -47,105 +47,105 @@
            - remmina
            - remmina-plugin-*
            - libfreerdp*
-#     - role: packages
-#       vars:
-#         package_name: S/MIME & SSL
-#         packages:
-#            - openssh-server
-# # ssh-keygen
-# # ssh-copy-id remote_username@server_ip_address
-#     - role: packages
-#       vars:
-#         package_name: rsync
-#         packages:
-#            - rsync
-#            - grsync
-#     - role: packages
-#       vars:
-#         package_name: proxy
-#         packages:
-#            - squid
-#     - role: packages
-#       vars:
-#         package_name: desktop-chromium
-#         packages:
-#             - chromium-browser
-#             - chromium-codecs-ffmpeg
-#             - chromium-codecs-ffmpeg-extra
-#     - role: packages
-#       vars:
-#         package_name: desktop-email
-#         packages:
-#             - evolution
-#             - thunderbird
-#     - role: packages
-#       vars:
-#         package_name: desktop-codecses
-#         packages:
-#             - gstreamer1.0-libav
-#             - gstreamer1.0-opencv
-#             - gstreamer1.0-plugins-bad-apps
-#             - gstreamer1.0-plugins-base
-#             - gstreamer1.0-plugins-base-apps
-#             - gstreamer1.0-plugins-good
-#             - gstreamer1.0-plugins-ugly
-#             - gstreamer1.0-tools
-#             - gstreamer1.0-wpe
-#     - role: packages
-#       vars:
-#         package_name: desktop-twitch-codecses
-#         packages:
-#             - gnome-twitch-player-backend-gstreamer-cairo
-#             - gnome-twitch-player-backend-gstreamer-clutter
-#             - gnome-twitch-player-backend-gstreamer-opengl
-#     - role: packages
-#       vars:
-#         package_name: libreoffice
-#         packages:
-#             - libreoffice
-#             - libreoffice-base
-#             - libreoffice-sdbc-mysql
-#             - libreoffice-sdbc-postgresql
-#             - libreoffice-evolution
-#             - libreoffice-l10n-nl
-#             - libreoffice-pdfimport
-#             - libreoffice-dev-doc
-#             - libreoffice-dev
-#             - libreofficekit-data
-#             - libreofficekit-dev
-#             - libreoffice-avmedia-backend-gstreamer
-#     - role: packages
-#       vars:
-#         package_name: desktop-gnome
-#         packages:
-#             - unzip
-#             - gnome
-#             - gnome-shell
-#             - gnome-shell-extensions
-#             - gnome-shell-extension-prefs
-#             - gnome-shell-extension-autohidetopbar
-#             - gnome-shell-extension-gsconnect
-#             - chrome-gnome-shell
-#     - role: packages-remove
-#       vars:
-#         package_name: desktop-gnome-remove-games
-#         packages:
-#             - aisleriot
-#             - five-or-more
-#             - four-in-a-row
-#             - hitori
-#             - gnome-klotski
-#             - gnome-mahjongg
-#             - gnome-mines
-#             - gnome-nibbles
-#             - gnome-robots
-#             - gnome-sudoku
-#             - gnome-taquin
-#             - gnome-tetravex
-#             - lightsoff
-#             - quadrapassel
-#             - swell-foop
-#             - tali
+    - role: packages
+      vars:
+        package_name: S/MIME & SSL
+        packages:
+           - openssh-server
+# ssh-keygen
+# ssh-copy-id remote_username@server_ip_address
+    - role: packages
+      vars:
+        package_name: rsync
+        packages:
+           - rsync
+           - grsync
+    - role: packages
+      vars:
+        package_name: proxy
+        packages:
+           - squid
+    - role: packages
+      vars:
+        package_name: desktop-chromium
+        packages:
+            - chromium-browser
+            - chromium-codecs-ffmpeg
+            - chromium-codecs-ffmpeg-extra
+    - role: packages
+      vars:
+        package_name: desktop-email
+        packages:
+            - evolution
+            - thunderbird
+    - role: packages
+      vars:
+        package_name: desktop-codecses
+        packages:
+            - gstreamer1.0-libav
+            - gstreamer1.0-opencv
+            - gstreamer1.0-plugins-bad-apps
+            - gstreamer1.0-plugins-base
+            - gstreamer1.0-plugins-base-apps
+            - gstreamer1.0-plugins-good
+            - gstreamer1.0-plugins-ugly
+            - gstreamer1.0-tools
+            - gstreamer1.0-wpe
+    - role: packages
+      vars:
+        package_name: desktop-twitch-codecses
+        packages:
+            - gnome-twitch-player-backend-gstreamer-cairo
+            - gnome-twitch-player-backend-gstreamer-clutter
+            - gnome-twitch-player-backend-gstreamer-opengl
+    - role: packages
+      vars:
+        package_name: libreoffice
+        packages:
+            - libreoffice
+            - libreoffice-base
+            - libreoffice-sdbc-mysql
+            - libreoffice-sdbc-postgresql
+            - libreoffice-evolution
+            - libreoffice-l10n-nl
+            - libreoffice-pdfimport
+            - libreoffice-dev-doc
+            - libreoffice-dev
+            - libreofficekit-data
+            - libreofficekit-dev
+            - libreoffice-avmedia-backend-gstreamer
+    - role: packages
+      vars:
+        package_name: desktop-gnome
+        packages:
+            - unzip
+            - gnome
+            - gnome-shell
+            - gnome-shell-extensions
+            - gnome-shell-extension-prefs
+            - gnome-shell-extension-autohidetopbar
+            - gnome-shell-extension-gsconnect
+            - chrome-gnome-shell
+    - role: packages-remove
+      vars:
+        package_name: desktop-gnome-remove-games
+        packages:
+            - aisleriot
+            - five-or-more
+            - four-in-a-row
+            - hitori
+            - gnome-klotski
+            - gnome-mahjongg
+            - gnome-mines
+            - gnome-nibbles
+            - gnome-robots
+            - gnome-sudoku
+            - gnome-taquin
+            - gnome-tetravex
+            - lightsoff
+            - quadrapassel
+            - swell-foop
+            - tali
     - role: ansible-role-customize-gnome
       vars:
         gnome_user: "{{sudo_user}}"
@@ -153,27 +153,27 @@
           - id: 1139 # apt-update-indicator
           # - id: 2197 # new-apt-update-indicator
           - id: 945 # cpu-power-manager
-          # - id: 82 # cpu-temperature-indicator
-          # - id: 307 # dash-to-dock
-          # - id: 1036 # extensions
-          # - id: 1166 # extension-update-notifier
-          # - id: 750 # openweather
-          # - id: 836 # internet-radio
-          # - id: 154 # gmail-notify
-          # # - id: 1247 # gnome-radio
-          # - id: 336 # hardware-sensors-indicator
-          # - id: 921 # multi-monitors-add-on
-          # - id: 104 # netspeed
-          # - id: 1505 # new-mail-indicator
-          # - id: 214 # pidgin-conversation-integration
-          # - id: 170 # pidgin-peristent-notification
-          # - id: 473 # remmina-search-provider
-          # - id: 430 # shell-utilities
-          # - id: 941 # show-ip
-          # - id: 906 # sound-output-device-chooser
-          # - id: 73 # ssh-search-provider
-          # - id: 9 # systemmonitor
-          # - id: 365 # transmission-daemon-indicator
+          - id: 82 # cpu-temperature-indicator
+          - id: 307 # dash-to-dock
+          - id: 1036 # extensions
+          - id: 1166 # extension-update-notifier
+          - id: 750 # openweather
+          - id: 836 # internet-radio
+          - id: 154 # gmail-notify
+          # - id: 1247 # gnome-radio
+          - id: 336 # hardware-sensors-indicator
+          - id: 921 # multi-monitors-add-on
+          - id: 104 # netspeed
+          - id: 1505 # new-mail-indicator
+          - id: 214 # pidgin-conversation-integration
+          - id: 170 # pidgin-peristent-notification
+          - id: 473 # remmina-search-provider
+          - id: 430 # shell-utilities
+          - id: 941 # show-ip
+          - id: 906 # sound-output-device-chooser
+          - id: 73 # ssh-search-provider
+          - id: 9 # systemmonitor
+          - id: 365 # transmission-daemon-indicator
         gnome_dconf:
           - key: /org/gnome/desktop/background/show-desktop-icons
             value: "true"
