@@ -1,0 +1,74 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      when: ansible_facts['os_family'] == 'Debian'
+      vars:
+        package_name: APT
+        packages:
+            - software-properties-common
+            - apt-transport-https
+    - role: repo_apt_add
+      vars:
+        repo_name: vscode
+        repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
+        repo: https://packages.microsoft.com/repos/vscode
+    - role: packages
+      vars:
+        package_name: developer
+        packages:
+            - code
+#            - cpp-dependencies
+            - graphviz
+      community.general.snap:
+        name:
+          - cmake
+    - role: packages
+      vars:
+        package_name: kernel-developer
+        packages:
+            # - linux-headers-$(uname -r)
+            - ncurses-dev
+            # - kernel-package
+            # - qt4-dev-tools
+            - pkg-config
+            - build-essential
+    # make menuconfig and make xconfig
+    - role: packages
+      vars:
+        package_name: ansible-developer
+        packages:
+            - build-essential
+            - libssl-dev
+            - libffi-dev
+            - python3-dev
+    - role: repo_apt_add
+      vars:
+        repo_name: yarnpkg
+        repo_key_url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        repo: https://dl.yarnpkg.com/debian/
+    - role: packages
+      vars:
+        package_name: node-developer
+        packages:
+            - nodejs
+            - npm
+            - yarn
+    - role: packages
+      vars:
+        package_name: php-developer
+        packages:
+            - composer
+            - php-common
+            - php-curl
+            - php-dom
+            - php-gd
+            - php-json
+            - php-mbstring
+            - php-mysql
+            - php-xml
+            - php-zip

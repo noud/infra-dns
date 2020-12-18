@@ -55,7 +55,7 @@ ansible-vault create vault # edit, if you like
 # vault_psql_pass: postgres
 # vault_docker_hub_username: hub_user
 # vault_docker_hub_password: hub_secret
-ansible-playbook -i domain all.yml --ask-vault-pass
+ansible-playbook -i domain infra.yml --ask-vault-pass
 # on 10.128.100.101
 ./bin/install-config-host1.sh
 ```
