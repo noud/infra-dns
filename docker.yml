@@ -37,3 +37,8 @@
         packages:
             - python3-distutils
             - python3-pip
+    - role: pip
+      vars:
+        package_name: pyyaml
+        packages:
+            - pyyaml
