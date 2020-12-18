@@ -12,7 +12,6 @@
         packages:
             - apt-transport-https
             - ca-certificates
-            # - curl
             - gnupg-agent
             - software-properties-common
     - role: repo_apt_add
