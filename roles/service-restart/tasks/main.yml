@@ -3,4 +3,3 @@
     enabled: yes
     name: "{{service}}"
     state: restarted
-    # use: "{{service}}.service"
