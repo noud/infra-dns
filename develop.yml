@@ -12,7 +12,7 @@
         packages:
             - software-properties-common
             - apt-transport-https
-    - role: repo_apt_add
+    - role: repo-add
       vars:
         repo_name: vscode
         repo_key_url: https://packages.microsoft.com/keys/microsoft.asc
@@ -46,7 +46,7 @@
             - libssl-dev
             - libffi-dev
             - python3-dev
-    - role: repo_apt_add
+    - role: repo-add
       vars:
         repo_name: yarnpkg
         repo_key_url: https://dl.yarnpkg.com/debian/pubkey.gpg

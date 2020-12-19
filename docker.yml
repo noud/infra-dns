@@ -14,11 +14,12 @@
             - ca-certificates
             - gnupg-agent
             - software-properties-common
-    - role: repo_apt_add
+    - role: repo-add
       vars:
         repo_name: docker
         repo_key_url: https://download.docker.com/linux/ubuntu/gpg
         repo: https://download.docker.com/linux/ubuntu
+# fatal: [ns1]: FAILED! => {"changed": false, "msg": "apt cache update failed"}
     - role: packages
       vars:
         package_name: docker
@@ -26,6 +27,7 @@
             - docker-ce
             - docker-ce-cli
             - containerd.io
+    - role: docker-compose
     - role: user-to-group
       vars:
         group: docker
@@ -41,3 +43,6 @@
         package_name: pyyaml
         packages:
             - pyyaml
+    - role: service-restart
+      vars:
+        service: docker

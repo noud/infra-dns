@@ -1,4 +1,6 @@
 - name: start service {{service}}, if not started
   service:
+    enabled: yes
     name: "{{service}}"
     state: restarted
+    # use: "{{service}}.service"

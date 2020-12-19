@@ -1,9 +1,0 @@
-- name: Add {{repo_name}} key to APT
-  apt_key:
-    url: "{{repo_key_url}}"
-    state: present
-- name: Add repository {{repo_name}} to APT
-  apt_repository:
-    update_cache: yes
-    repo: "deb [arch=amd64] {{repo}} stable main"
-    state: present

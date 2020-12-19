@@ -1,6 +1,0 @@
-- name: Add Docker repository on rpm packaging systems like centos fedora rhel
-  yum_repository:
-    name: docker_ce_repo_on_rpm
-    description: repo
-    baseurl: "{{repo}}{{os}}/{{os_version}}/{{ansible_machine}}/stable/"
-    gpgcheck: false

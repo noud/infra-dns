@@ -230,7 +230,6 @@
       community.general.snap:
         name:
           - modem-manager
-    - role: docker-compose
     #  systemctl status snap.modem-manager.modemmanager.service 
     
     # sudo apt install pythonpy

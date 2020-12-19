@@ -1,0 +1,19 @@
+- name: Add {{repo_name}} key to APT
+  when: ansible_facts['os_family'] == 'Debian'
+  apt_key:
+    url: "{{repo_key_url}}"
+    state: present
+- name: Add repository {{repo_name}} to APT
+  when: ansible_facts['os_family'] == 'Debian'
+  apt_repository:
+    # update_cache: yes
+    repo: "deb [arch=amd64] {{repo}} stable main"
+    codename: "{{ ansible_distribution_release }}"
+    state: present
+- name: Add repository {{repo_name}} to RPM
+  when: ansible_facts['os_family'] == 'RedHat'
+  yum_repository:
+    name: docker_ce_repo_on_rpm
+    description: repo
+    baseurl: "{{repo}}{{os}}/{{os_version}}/{{ansible_machine}}/stable/"
+    gpgcheck: false

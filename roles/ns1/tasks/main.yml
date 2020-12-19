@@ -10,13 +10,13 @@
   template: 
     src: "etc/bind/zones/db.10.128" 
     dest: "/etc/bind/zones"
-- name: config zones to DNS ns 1
+- name: config zones to DNS ns1
   template: 
     src: "etc/bind/named.conf.local.diff" 
     dest: "/tmp/named.conf.local.diff"
     # vars:
     #   ns1_ip: 10.128.10.11
-- name: and patch ns 1
+- name: and patch ns1
   ansible.posix.patch:
     src: /tmp/named.conf.local.diff
     dest: /etc/bind/named.conf.local

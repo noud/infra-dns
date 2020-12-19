@@ -47,7 +47,7 @@
         ns1_ip: 10.128.10.11
     - role: service-restart
       vars:
-        service: bind9
+        service: named
     - role: dhcp
       when: inventory_hostname == "ns1"
     - role: service-restart
