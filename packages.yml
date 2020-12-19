@@ -231,9 +231,9 @@
       community.general.snap:
         name:
           - modem-manager
-    - role: service-restart
-      vars:
-        service: snap.modem-manager.modemmanager.service 
+    # - role: service-restart
+    #   vars:
+    #     service: snap.modem-manager.modemmanager.service 
     - role: pip
       vars:
         package_name: pythonpy
