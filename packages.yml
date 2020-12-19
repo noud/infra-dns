@@ -196,6 +196,7 @@
       community.general.snap:
         name: skype
         classic: yes
+# fatal: [ns1]: FAILED! => {"changed": false, "msg": "No package matching 'libusb1' is available"}
     - role: packages
       vars:
         package_name: Bluetooth
@@ -230,10 +231,14 @@
       community.general.snap:
         name:
           - modem-manager
-    #  systemctl status snap.modem-manager.modemmanager.service 
-    
-    # sudo apt install pythonpy
-
-    # sudo pip install pythonpy libusb1
+    - role: service-restart
+      vars:
+        service: snap.modem-manager.modemmanager.service 
+    - role: pip
+      vars:
+        package_name: pythonpy
+        packages:
+            - pythonpy
+            - libusb1
     # echo "alias py='pythonpy'" >> ~/.bashrc
     # /home/noud/.local/bin/py:16: DeprecationWarning: Using or importing the ABCs from 'collections' instead of from 'collections.abc' is deprecated since Python 3.3, and in 3.9 it will stop working

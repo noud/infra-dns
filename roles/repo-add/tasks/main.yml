@@ -2,6 +2,7 @@
   when: ansible_facts['os_family'] == 'Debian'
   apt_key:
     url: "{{repo_key_url}}"
+    # id: "{{repo_id}}"
     state: present
 - name: Add repository {{repo_name}} to APT
   when: ansible_facts['os_family'] == 'Debian'

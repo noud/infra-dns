@@ -19,6 +19,7 @@
         repo_name: docker
         repo_key_url: https://download.docker.com/linux/ubuntu/gpg
         repo: https://download.docker.com/linux/ubuntu
+        repo_id: 9DC858229FC7DD38854AE2D88D81803C0EBFCD88
 # fatal: [ns1]: FAILED! => {"changed": false, "msg": "apt cache update failed"}
     - role: packages
       vars:
@@ -37,7 +38,6 @@
         package_name: Python
         packages:
             - python3-distutils
-            - python3-pip
     - role: pip
       vars:
         package_name: pyyaml
