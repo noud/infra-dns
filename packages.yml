@@ -42,6 +42,13 @@
           #  nm-connection-editor
     - role: packages
       vars:
+        package_name: Samba
+        packages:
+           - samba-common
+           - samba
+           - smbclient
+    - role: packages
+      vars:
         package_name: Remote Desktop Protocol (RDP)
         packages:
            - remmina
