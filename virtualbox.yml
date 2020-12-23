@@ -19,6 +19,11 @@
         iso_file_name: CentOS-7-x86_64-NetInstall-2009.iso
     - role: get-iso
       vars:
+        iso_name: CentOS 8
+        iso_url: http://mirror.nl.datapacket.com/centos/8-stream/isos/x86_64/
+        iso_file_name: CentOS-Stream-8-x86_64-20201211-dvd1.iso
+    - role: get-iso
+      vars:
         iso_name: Fedora 31
         iso_url: https://archives.fedoraproject.org/pub/archive/fedora/linux/releases/31/Server/x86_64/iso
         iso_file_name: Fedora-Server-netinst-x86_64-31-1.9.iso
