@@ -1,0 +1,4 @@
+- name: Download {{iso_name}} iso
+  get_url:
+    url: "{{iso_url}}/{{iso_file_name}}"
+    dest: "/home/{{sudo_user}}/Downloads/{{iso_file_name}}"

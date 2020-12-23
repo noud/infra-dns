@@ -14,7 +14,8 @@ mkdir -p $USER/.ansible/roles && cd $USER/.ansible/roles && git clone https://gi
 declare -a arr=("packages" \
 "infra" \
 "develop" \
-"docker"
+"docker" \
+"virtualbox"
 )
 
 cd ~/workspaces/laravel-workspace/infra-dns
