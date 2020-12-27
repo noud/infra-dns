@@ -20,7 +20,7 @@
     - role: get-iso
       vars:
         iso_name: CentOS 8
-        iso_url: http://mirror.nl.datapacket.com/centos/8-stream/isos/x86_64/
+        iso_url: http://isoredirect.centos.org/centos/8-stream/isos/x86_64
         iso_file_name: CentOS-Stream-8-x86_64-20201211-dvd1.iso
     - role: get-iso
       vars:
@@ -30,12 +30,12 @@
     - role: get-iso
       vars:
         iso_name: Fedora 32
-        iso_url: http://fedora.mirror.wearetriple.com/linux/releases/32/Server/x86_64/iso
+        iso_url: https://download.fedoraproject.org/pub/fedora/linux/releases/32/Server/x86_64/iso
         iso_file_name: Fedora-Server-netinst-x86_64-32-1.6.iso
     - role: get-iso
       vars:
         iso_name: Fedora 33
-        iso_url: http://fedora.mirror.wearetriple.com/linux/releases/33/Server/x86_64/iso
+        iso_url: https://download.fedoraproject.org/pub/fedora/linux/releases/33/Server/x86_64/iso
         iso_file_name: Fedora-Server-netinst-x86_64-33-1.2.iso
     - role: get-iso
       vars:
