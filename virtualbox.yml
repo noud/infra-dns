@@ -49,21 +49,21 @@
         iso_file_name: ubuntu-16.04.7-server-amd64.iso
     - role: get-iso
       vars:
-        iso_name: Ubuntu 20.04.1 LTS (Focal Fossa) server
-        iso_url: http://releases.ubuntu.com/20.04
-        iso_file_name: ubuntu-20.04.1-live-server-amd64.iso
-    - role: get-iso
-      vars:
         iso_name: Ubuntu 20.04.1 LTS (Focal Fossa) desktop
         iso_url: http://releases.ubuntu.com/20.04
         iso_file_name: ubuntu-20.04.1-desktop-amd64.iso
     - role: get-iso
       vars:
-        iso_name: Ubuntu 20.10 (Groovy Gorilla) server
-        iso_url: http://releases.ubuntu.com/20.10
-        iso_file_name: ubuntu-20.10-live-server-amd64.iso
+        iso_name: Ubuntu 20.04.1 LTS (Focal Fossa) server
+        iso_url: http://releases.ubuntu.com/20.04
+        iso_file_name: ubuntu-20.04.1-live-server-amd64.iso
     - role: get-iso
       vars:
         iso_name: Ubuntu 20.10 (Groovy Gorilla) desktop
         iso_url: http://releases.ubuntu.com/20.10/
         iso_file_name: ubuntu-20.10-desktop-amd64.iso
+    - role: get-iso
+      vars:
+        iso_name: Ubuntu 20.10 (Groovy Gorilla) server
+        iso_url: http://releases.ubuntu.com/20.10
+        iso_file_name: ubuntu-20.10-live-server-amd64.iso
