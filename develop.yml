@@ -2,10 +2,10 @@
   import_playbook: develop-android.yml
 - name: Ansible
   import_playbook: develop-ansible.yml
+- name: JavaScript
+  import_playbook: develop-lang-javascript.yml
 - name: Haskell
   import_playbook: develop-lang-haskell.yml
-- name: Node.js
-  import_playbook: develop-lang-node.yml
 - name: PHP
   import_playbook: develop-lang-php.yml
 - hosts: localhost

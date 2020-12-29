@@ -9,7 +9,7 @@
         repo: https://dl.yarnpkg.com/debian/
     - role: packages
       vars:
-        package_name: Node.js
+        package_name: JavaScript
         packages:
             - nodejs
             - npm
