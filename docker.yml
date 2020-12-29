@@ -46,3 +46,8 @@
     - role: service-restart
       vars:
         service: docker
+    - role: packages
+      vars:
+        package_name: Alpine Linux package management
+        packages:
+            - apktool

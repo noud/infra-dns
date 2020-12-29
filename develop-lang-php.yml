@@ -1,0 +1,16 @@
+- hosts: localhost
+  roles:
+    - role: packages
+      vars:
+        package_name: PHP
+        packages:
+            - composer
+            - php-common
+            - php-curl
+            - php-dom
+            - php-gd
+            - php-json
+            - php-mbstring
+            - php-mysql
+            - php-xml
+            - php-zip

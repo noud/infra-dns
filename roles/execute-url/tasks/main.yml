@@ -1,0 +1,19 @@
+- name: Check that {{ result }} exists
+  stat:
+    path: "{{ result }}"
+  register: stat_result
+- name: Download url
+  when: not stat_result.stat.exists
+  get_url:
+    url: "{{ url }}"
+    dest: /tmp/local-url
+    mode: '0500'
+- name: Execute url
+  when: not stat_result.stat.exists
+  command: "{{ command }} /tmp/local-url"
+  # @todo add ignore error to the above
+- name: Remove downloaded url
+  when: not stat_result.stat.exists
+  file:
+    path: /tmp/local-url
+    state: absent

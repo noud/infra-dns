@@ -1,0 +1,65 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: desktop-chromium
+        packages:
+            - chromium-browser
+            - chromium-codecs-ffmpeg
+            - chromium-codecs-ffmpeg-extra
+    - role: packages
+      vars:
+        package_name: desktop-email
+        packages:
+            - evolution
+            - thunderbird
+    - role: packages
+      vars:
+        package_name: desktop-codecses
+        packages:
+            - gstreamer1.0-libav
+            - gstreamer1.0-opencv
+            - gstreamer1.0-plugins-bad-apps
+            - gstreamer1.0-plugins-base
+            - gstreamer1.0-plugins-base-apps
+            - gstreamer1.0-plugins-good
+            - gstreamer1.0-plugins-ugly
+            - gstreamer1.0-tools
+            - gstreamer1.0-wpe
+    - role: packages
+      vars:
+        package_name: libreoffice
+        packages:
+            - libreoffice
+            - libreoffice-base
+            - libreoffice-sdbc-mysql
+            - libreoffice-sdbc-postgresql
+            - libreoffice-evolution
+            - libreoffice-l10n-nl
+            - libreoffice-pdfimport
+            - libreoffice-dev-doc
+            - libreoffice-dev
+            - libreofficekit-data
+            - libreofficekit-dev
+            - libreoffice-avmedia-backend-gstreamer
+    - role: packages
+      vars:
+        package_name: IM
+        packages:
+            - pidgin
+      community.general.snap:
+        name:
+          - whatsdesk
+          - yakyak
+    - role: packages
+      vars:
+        package_name: Skype
+      community.general.snap:
+        name: skype
+        classic: yes
+# fatal: [ns1]: FAILED! => {"changed": false, "msg": "No package matching 'libusb1' is available"}

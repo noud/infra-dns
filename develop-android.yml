@@ -1,0 +1,22 @@
+- name: Java
+  import_playbook: develop-lang-java.yml
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: Android
+        packages:
+            - adb
+            - android-sdk-platform-tools-common
+      community.general.snap:
+        name: android-studio
+        classic: yes
+    - role: user-to-group
+      vars:
+        group: plugdev
+        user: "{{sudo_user}}"

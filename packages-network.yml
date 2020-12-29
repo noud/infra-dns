@@ -1,0 +1,87 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: disk utils
+        packages:
+            - gsmartcontrol
+            - usb-creator-gtk
+    - role: packages
+      vars:
+        package_name: DNS
+        packages:
+            - bind9
+            - bind9utils
+            - bind9-doc
+    - role: packages
+      vars:
+        package_name: DHCP
+        packages:
+            - isc-dhcp-server
+    - role: packages
+      vars:
+        package_name: PGP/GPG/OpenPGP
+        packages:
+            # - OpenPGP Applet
+            # - constellation
+    - role: packages
+      vars:
+        package_name: network tools
+        packages:
+           - inetutils-traceroute
+           - net-tools
+           - ethtool
+           - network-manager
+    - role: packages
+      vars:
+        package_name: Samba
+        packages:
+           - samba-common
+           - samba
+           - smbclient
+    - role: packages
+      vars:
+        package_name: Remote Desktop Protocol (RDP)
+        packages:
+           - remmina
+           - remmina-plugin-*
+           - libfreerdp*
+    - role: packages
+      vars:
+        package_name: S/MIME & SSL
+        packages:
+           - openssh-server
+# ssh-keygen
+# ssh-copy-id remote_username@server_ip_address
+    - role: packages
+      vars:
+        package_name: rsync
+        packages:
+           - rsync
+    - role: packages
+      vars:
+        package_name: proxy
+        packages:
+           - squid
+    - role: packages
+      vars:
+        package_name: Bluetooth
+        packages:
+            - bluez
+    - role: packages
+      vars:
+        package_name: broadband
+        packages:
+            - cu
+            - minicom
+      community.general.snap:
+        name:
+          - modem-manager
+    # - role: service-restart
+    #   vars:
+    #     service: snap.modem-manager.modemmanager.service 

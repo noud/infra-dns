@@ -11,16 +11,4 @@ ansible-galaxy install petermosmans.customize-gnome
 
 mkdir -p $USER/.ansible/roles && cd $USER/.ansible/roles && git clone https://github.com/PeterMosmans/ansible-role-customize-gnome.git
 
-declare -a arr=("packages" \
-"infra" \
-"develop" \
-"docker" \
-"virtualbox"
-)
-
-cd ~/workspaces/laravel-workspace/infra-dns
-for i in "${arr[@]}"
-do
-    export PLAYBOOK="$i"
-    ansible-playbook -i domain ${PLAYBOOK}.yml --ask-vault-pass 
-done
+ansible-playbook -i domain all.yml --ask-vault-pass

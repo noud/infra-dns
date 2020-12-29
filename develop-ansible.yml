@@ -1,0 +1,13 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  ignore_errors: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: Ansible
+        packages:
+            - build-essential
+            - libssl-dev
+            - libffi-dev
+            - python3-dev

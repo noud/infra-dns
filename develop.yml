@@ -1,3 +1,13 @@
+- name: Android
+  import_playbook: develop-android.yml
+- name: Ansible
+  import_playbook: develop-ansible.yml
+- name: Haskell
+  import_playbook: develop-lang-haskell.yml
+- name: Node.js
+  import_playbook: develop-lang-node.yml
+- name: PHP
+  import_playbook: develop-lang-php.yml
 - hosts: localhost
   user: super_user
   become: yes
@@ -39,45 +49,3 @@
             - pkg-config
             - build-essential
     # make menuconfig and make xconfig
-    - role: packages
-      vars:
-        package_name: ansible-developer
-        packages:
-            - build-essential
-            - libssl-dev
-            - libffi-dev
-            - python3-dev
-    - role: repo-add
-      vars:
-        repo_name: yarnpkg
-        repo_key_url: https://dl.yarnpkg.com/debian/pubkey.gpg
-        repo: https://dl.yarnpkg.com/debian/
-    - role: packages
-      vars:
-        package_name: node-developer
-        packages:
-            - nodejs
-            - npm
-            - yarn
-    - role: packages
-      vars:
-        package_name: android-developer
-        packages:
-            - openjdk-11-jdk
-      community.general.snap:
-        name: android-studio
-        classic: yes
-    - role: packages
-      vars:
-        package_name: php-developer
-        packages:
-            - composer
-            - php-common
-            - php-curl
-            - php-dom
-            - php-gd
-            - php-json
-            - php-mbstring
-            - php-mysql
-            - php-xml
-            - php-zip

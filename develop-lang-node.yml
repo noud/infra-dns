@@ -1,0 +1,16 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  roles:
+    - role: repo-add
+      vars:
+        repo_name: yarnpkg
+        repo_key_url: https://dl.yarnpkg.com/debian/pubkey.gpg
+        repo: https://dl.yarnpkg.com/debian/
+    - role: packages
+      vars:
+        package_name: Node.js
+        packages:
+            - nodejs
+            - npm
+            - yarn

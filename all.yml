@@ -1,0 +1,10 @@
+- name: packages
+  import_playbook: packages.yml
+- name: infra
+  import_playbook: infra.yml
+- name: develop
+  import_playbook: develop.yml
+- name: docker
+  import_playbook: docker.yml
+- name: virtualbox
+  import_playbook: virtualbox.yml

@@ -1,0 +1,35 @@
+- hosts: localhost
+  roles:
+    # https://medium.com/@remisa.yousefvand/setup-haskell-development-environment-on-ubuntu-64c0f29f2b
+    - role: packages
+      vars:
+        package_name: Haskell
+        packages:
+            - libicu-dev
+            - libtinfo-dev
+            - libgmp-dev
+            - libc6-dev
+            - libffi-dev
+            - git
+            - g++
+            - gcc
+            - make
+            - xz-utils
+            - zlib1g-dev
+            - gnupg
+    - role: execute-url
+      vars:
+        url: https://get.haskellstack.org
+        command: sh
+        result: /usr/local/bin/stack
+    # - role: execute-sh
+    #   vars:
+    #     command: stack install cabal-install
+    - role: packages
+      vars:
+        package_name: haskell-cabal
+        packages:
+            - cabal-install
+    - role: execute-sh
+      vars:
+        command: cabal update
