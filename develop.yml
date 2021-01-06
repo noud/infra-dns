@@ -38,6 +38,7 @@
         name:
           - cmake
           - eclipse
+          - postman
     - role: packages
       vars:
         package_name: kernel-developer

@@ -1,4 +1,7 @@
 - hosts: localhost
+  user: super_user
+  become: yes
+  ignore_errors: yes
   roles:
     # https://medium.com/@remisa.yousefvand/setup-haskell-development-environment-on-ubuntu-64c0f29f2b
     - role: packages
@@ -33,3 +36,6 @@
     - role: execute-sh
       vars:
         command: cabal update
+    - role: execute-sh
+      vars:
+        command: cabal new-install erd

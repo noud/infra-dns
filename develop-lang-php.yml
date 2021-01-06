@@ -11,6 +11,8 @@
             - php-gd
             - php-json
             - php-mbstring
+            - php-mongodb
             - php-mysql
+            - php-pgsql
             - php-xml
             - php-zip
