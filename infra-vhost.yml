@@ -1,0 +1,33 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: infra-apache2
+        packages:
+            - apache2
+    # multidimensional array of vars @todo
+    - role: wahidsadik.apache-virtual-host
+      website: dev.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: laravel.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: api-platform-demo.localhost
+      template: laravel
+      # vars:
+      #   gnome_user: "{{sudo_user}}"
+      #   gnome_extensions:
+      #     - id: 1139 # apt-update-indicator
+      #     - id: 365 # transmission-daemon-indicator
+      #   gnome_dconf:
+      #     # - key: /org/gnome/shell/enabled-extensions
+      #     #   value: ['new-apt-update-indicator@hamburgerjungejr', 'netspeed@hedayaty.gmail.com']
+    - role: service-stop
+      vars:
+        service: apache2

@@ -1,0 +1,5 @@
+- name: stop service {{service}}, if started
+  service:
+    enabled: no
+    name: "{{service}}"
+    state: stopped
