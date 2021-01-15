@@ -1,3 +1,5 @@
+- name: docker
+  import_playbook: docker.yml
 - name: vhosts.files
   import_playbook: infra-vhost.yml
 - hosts: localhost
