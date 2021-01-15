@@ -11,23 +11,89 @@
         packages:
             - apache2
     # multidimensional array of vars @todo
+    # laravel essential
     - role: wahidsadik.apache-virtual-host
       website: dev.localhost
       template: laravel
     - role: wahidsadik.apache-virtual-host
       website: laravel.localhost
       template: laravel
+    # laravel generic
     - role: wahidsadik.apache-virtual-host
       website: api-platform-demo.localhost
       template: laravel
-      # vars:
-      #   gnome_user: "{{sudo_user}}"
-      #   gnome_extensions:
-      #     - id: 1139 # apt-update-indicator
-      #     - id: 365 # transmission-daemon-indicator
-      #   gnome_dconf:
-      #     # - key: /org/gnome/shell/enabled-extensions
-      #     #   value: ['new-apt-update-indicator@hamburgerjungejr', 'netspeed@hedayaty.gmail.com']
+    - role: wahidsadik.apache-virtual-host
+      website: schema-builder.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: dreamfactory.localhost
+      template: laravel
+    # laravel various
+    - role: wahidsadik.apache-virtual-host
+      website: json-ld-laravel.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: larapassport.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: laravel-chat.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: laravel-first-crud-app.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: laravel-images.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: lighthouse-tutorial.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: links.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: saas.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: seo.localhost
+      template: laravel
+    # react
+    - role: wahidsadik.apache-virtual-host
+      website: react-admin-data-graphql-simple.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: schema.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: tic-tac-toe-react.localhost
+      template: laravel
+    # relative
+    # symfony
+    - role: wahidsadik.apache-virtual-host
+      website: symfony3heroku.localhost
+      template: relative
+      relative_path: web
+    # from web to public @todo
+    - role: wahidsadik.apache-virtual-host
+      website: api-platform-demo.localhost
+      template: laravel
+    - role: wahidsadik.apache-virtual-host
+      website: gripp.localhost
+      template: laravel
+    # SSO
+    - role: wahidsadik.apache-virtual-host
+      website: phpbb.localhost
+      template: relative
+      relative_path: phpBB
+    - role: wahidsadik.apache-virtual-host
+      website: moodle.localhost
+      template: relative
+      # template: simplesaml
+      relative_path: ''
+    - role: service-restart
+      vars:
+        service: apache2
+    # provision /etc/hosts @todo
+    # apache2ctl -S|grep namevhost|grep -v 127|sed  's/port 80 namevhost /127.0.0.1    /g'|sed 's/ (.*)//g'|sed 's/         //g'>t.txt
     - role: service-stop
       vars:
         service: apache2

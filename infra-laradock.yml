@@ -9,6 +9,5 @@
     - [ "vars.yml" ]
   ignore_errors: yes
   roles:
-    # provision /etc/hosts @todo
     # git clone laradock if not there @todo
     # provision laradock with vhosts.files @todo
