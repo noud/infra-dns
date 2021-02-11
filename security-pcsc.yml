@@ -1,0 +1,20 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  roles:
+    - role: packages
+      vars:
+        package_name: pcsc-lite
+        packages:
+            - libpcsclite-dev
+            - libpcsclite1
+            # - libpcsclite1-dbg
+            - pcscd
+    - role: packages
+      vars:
+        package_name: pcsc-lite GUI
+        packages:
+            - pcsc-tools
+      community.general.snap:
+        name: pcsc-gscriptor
+        classic: yes
