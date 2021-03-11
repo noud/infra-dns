@@ -56,7 +56,7 @@
             - quadrapassel
             - swell-foop
             - tali
-    - role: ansible-role-customize-gnome
+    - role: petermosmans.customize-gnome
       vars:
         gnome_user: "{{sudo_user}}"
         gnome_extensions:
