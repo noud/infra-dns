@@ -1,4 +1,9 @@
+- name: Check that {{iso_file_name}} exists
+  stat:
+    path: "/home/{{sudo_user}}/Downloads/{{iso_file_name}}"
+  register: stat_result
 - name: Download {{iso_name}} iso
+  when: not stat_result.stat.exists
   get_url:
     url: "{{iso_url}}/{{iso_file_name}}"
     dest: "/home/{{sudo_user}}/Downloads/{{iso_file_name}}"
