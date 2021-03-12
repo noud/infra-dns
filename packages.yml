@@ -2,6 +2,8 @@
   import_playbook: packages-desktop.yml
 - name: Gnome
   import_playbook: packages-gnome.yml
+- name: Gnome Extensions
+  import_playbook: packages-gnome-extensions.yml
 - name: Network
   import_playbook: packages-network.yml
 - hosts: localhost
