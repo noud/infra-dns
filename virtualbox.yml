@@ -21,7 +21,7 @@
       vars:
         iso_name: CentOS 8
         iso_url: http://isoredirect.centos.org/centos/8-stream/isos/x86_64
-        iso_file_name: CentOS-Stream-8-x86_64-20201211-dvd1.iso
+        iso_file_name: CentOS-Stream-8-x86_64-20210311-boot.iso
     - role: get-iso
       vars:
         iso_name: Fedora 31
@@ -41,7 +41,7 @@
       vars:
         iso_name: Debian 10
         iso_url: http://cdimage.debian.org/debian-cd/current/amd64/iso-cd
-        iso_file_name: debian-10.7.0-amd64-netinst.iso
+        iso_file_name: debian-10.8.0-amd64-netinst.iso
     - role: get-iso
       vars:
         iso_name: Ubuntu 16.04.7 LTS (Xenial Xerus)
@@ -51,12 +51,12 @@
       vars:
         iso_name: Ubuntu 20.04.1 LTS (Focal Fossa) desktop
         iso_url: http://releases.ubuntu.com/20.04
-        iso_file_name: ubuntu-20.04.1-desktop-amd64.iso
+        iso_file_name: ubuntu-20.04.2.0-desktop-amd64.iso
     - role: get-iso
       vars:
         iso_name: Ubuntu 20.04.1 LTS (Focal Fossa) server
         iso_url: http://releases.ubuntu.com/20.04
-        iso_file_name: ubuntu-20.04.1-live-server-amd64.iso
+        iso_file_name: ubuntu-20.04.2-live-server-amd64.iso
     - role: get-iso
       vars:
         iso_name: Ubuntu 20.10 (Groovy Gorilla) desktop
