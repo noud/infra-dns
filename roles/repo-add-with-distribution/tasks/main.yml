@@ -12,7 +12,7 @@
   when: ansible_facts['os_family'] == 'Debian'
   apt_repository:
     update_cache: yes
-    repo: "deb [arch=amd64] {{repo}} groovy stable main"
+    repo: "deb [arch=amd64] {{repo}} {{ansible_distribution_release}} stable main"
     codename: "{{ ansible_distribution_release }}"
     state: present
 - name: Add repository {{repo_name}} to RPM
