@@ -1,0 +1,8 @@
+- name: Install Gnome Extensions in Chromium
+  # https://askubuntu.com/questions/1211636/how-to-install-gnome-shell-integration-extension-in-the-chromium-browser-via-com
+  file: 
+    path : /etc/chromium/policies/managed
+    state: directory
+  template: 
+    src: "chromium/my_policy.json" 
+    dest: "/etc/chromium/policies/managed/my_policy.json"
