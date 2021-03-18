@@ -1,0 +1,4 @@
+- name: snap PC/SC
+  community.general.snap:
+    name: pcsc-gscriptor
+    classic: yes

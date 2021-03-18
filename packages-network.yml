@@ -79,9 +79,7 @@
         packages:
             - cu
             - minicom
-      community.general.snap:
-        name:
-          - modem-manager
+    - role: snap-network
     # - role: service-restart
     #   vars:
     #     service: snap.modem-manager.modemmanager.service 

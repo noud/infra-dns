@@ -7,15 +7,7 @@
     - [ "vars.yml" ]
   ignore_errors: yes
   roles:
-    - role: packages
-      vars:
-        package_name: Android
-        packages:
-            - adb
-            - android-sdk-platform-tools-common
-      community.general.snap:
-        name: android-studio
-        classic: yes
+    - role: snap-android
     - role: user-to-group
       vars:
         group: plugdev

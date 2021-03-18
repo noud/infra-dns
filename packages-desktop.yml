@@ -52,17 +52,6 @@
         package_name: IM
         packages:
             - pidgin
-      community.general.snap:
-        name:
-          - whatsdesk
-          - yakyak
-    - role: packages
-      vars:
-        package_name: Skype
-      community.general.snap:
-        name: skype
-        classic: yes
-        # fatal: [ns1]: FAILED! => {"changed": false, "msg": "No package matching 'libusb1' is available"}
     - role: packages
       vars:
         package_name: Scanning
@@ -71,3 +60,4 @@
             - sane-utils
             # - libsane-extras
             - xsane
+    - name: snap-im

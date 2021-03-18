@@ -1,0 +1,4 @@
+- name: snap Shotcut
+  community.general.snap:
+    name: shotcut
+    classic: yes

@@ -55,15 +55,7 @@
         package_name: images
         packages:
             - shotwell
-    - role: packages
-      vars:
-        package_name: mp4
-        packages:
-            - vlc
-            - ubuntu-restricted-extras
-      community.general.snap:
-        name: shotcut
-        classic: yes
+    - role: snap-gnome
     - role: packages
       vars:
         package_name: pdf

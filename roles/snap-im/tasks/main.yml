@@ -1,0 +1,10 @@
+- name: snap Skype
+  community.general.snap:
+    name: skype
+    classic: yes
+- name: snap IMs
+  community.general.snap:
+    name:
+      - whatsdesk
+      - yakyak
+      - zoom-client

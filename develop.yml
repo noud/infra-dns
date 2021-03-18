@@ -23,11 +23,7 @@
         packages:
 #            - cpp-dependencies
             - graphviz
-      community.general.snap:
-        name:
-          - cmake
-          - eclipse
-          - postman
+    - role: snap-develop
     - role: packages
       vars:
         package_name: kernel-developer

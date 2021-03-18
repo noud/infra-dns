@@ -1,0 +1,4 @@
+- name: snap network
+  community.general.snap:
+    name:
+      - modem-manager

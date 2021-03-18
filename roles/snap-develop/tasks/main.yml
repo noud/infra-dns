@@ -1,0 +1,12 @@
+- name: snap cmake
+  community.general.snap:
+    name: cmake
+    classic: yes
+- name: snap Eclipse
+  community.general.snap:
+    name: eclipse
+    classic: yes
+- name: snap Postman
+  community.general.snap:
+    name:
+      - postman

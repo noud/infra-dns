@@ -1,0 +1,4 @@
+- name: snap Android Studio
+  community.general.snap:
+    name: android-studio
+    classic: yes
