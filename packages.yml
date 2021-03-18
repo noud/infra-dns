@@ -1,5 +1,7 @@
 - name: Desktop
   import_playbook: packages-desktop.yml
+- name: MS Teams
+  import_playbook: packages-teams.yml
 - name: Gnome
   import_playbook: packages-gnome.yml
 - name: Gnome Extensions
