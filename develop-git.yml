@@ -1,0 +1,17 @@
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    - role: download-unarchive
+      vars:
+        url_path: https://github.com/git-lfs/git-lfs/releases/download/v2.13.2/
+        tarball: git-lfs-linux-amd64-v2.13.2
+        tmp_path: git-lfs-install
+    - role: execute-sh
+      vars:
+        command: "/tmp/git-lfs-install/install.sh"
+    # git lfs track "*.psd"
+    # git add .gitattributes
