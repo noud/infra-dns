@@ -19,7 +19,7 @@
         repo: https://packages.microsoft.com/repos/vscode
     - role: packages
       vars:
-        package_name: developer-vscode
+        package_name: develop-vscode
         packages:
             - code
     - role: gantsign.visual-studio-code-extensions
@@ -27,3 +27,7 @@
         - username: "{{sudo_user}}"
           visual_studio_code_extensions:
             - ms-azuretools.vscode-docker
+            - ms-vscode-remote.remote-containers
+            - ms-kubernetes-tools.vscode-kubernetes-tools
+            - googlecloudtools.cloudcode
+            - mindaro.mindaro
