@@ -1,5 +1,5 @@
-- name: Git
-  import_playbook: develop-git.yml
+# - name: Git
+#   import_playbook: develop-git.yml
 - name: Android
   import_playbook: develop-android.yml
 - name: Ansible
