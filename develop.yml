@@ -26,6 +26,7 @@
 #            - cpp-dependencies
             - graphviz
     - role: snap-develop
+    - role: snap-k8s
     - role: packages
       vars:
         package_name: kernel-developer
