@@ -26,6 +26,8 @@
       users:
         - username: "{{sudo_user}}"
           visual_studio_code_extensions:
+            - kaishuu0123.vscode-erd-preview
+            - mikkel-ol.er-syntax-highlighting
             - ms-azuretools.vscode-docker
             - ms-vscode-remote.remote-containers
             - ms-kubernetes-tools.vscode-kubernetes-tools
