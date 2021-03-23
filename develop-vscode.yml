@@ -26,8 +26,20 @@
       users:
         - username: "{{sudo_user}}"
           visual_studio_code_extensions:
+            # generic
+            - mikestead.dotenv
+            # erd
             - kaishuu0123.vscode-erd-preview
             - mikkel-ol.er-syntax-highlighting
+            # laravel
+            - onecentlin.laravel-blade
+            - onecentlin.laravel5-snippets
+            - austenc.laravel-blade-spacer
+            - ryannaddy.laravel-artisan
+            - amiralizadeh9480.laravel-extra-intellisense
+            - stef-k.laravel-goto-controller
+            - codingyu.laravel-goto-view
+            # docker
             - ms-azuretools.vscode-docker
             - ms-vscode-remote.remote-containers
             - ms-kubernetes-tools.vscode-kubernetes-tools
