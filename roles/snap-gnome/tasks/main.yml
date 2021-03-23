@@ -2,3 +2,6 @@
   community.general.snap:
     name: shotcut
     classic: yes
+- name: snap Evince
+  community.general.snap:
+    name: evince

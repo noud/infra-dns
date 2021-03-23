@@ -61,3 +61,9 @@
             # - libsane-extras
             - xsane
     - name: snap-im
+    - role: packages
+      vars:
+        package_name: desktop-pdf
+        packages:
+            - xournal
+            - okular
