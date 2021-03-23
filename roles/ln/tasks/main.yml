@@ -1,0 +1,5 @@
+- name: ln -s {{ src }} to {{ dest }}
+  file:
+    src: "{{ src }}"
+    dest: "{{ dest }}"
+    state: link
