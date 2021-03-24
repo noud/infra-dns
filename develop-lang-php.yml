@@ -18,3 +18,4 @@
             - php-pgsql
             - php-xml
             - php-zip
+            - phpunit
