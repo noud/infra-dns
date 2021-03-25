@@ -1,2 +1,12 @@
-# wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.deb
-# sudo apt install ./slack-desktop-*.deb
+- hosts: localhost
+  user: super_user
+  become: yes
+  vars_files:
+    - [ "vars.yml" ]
+  ignore_errors: yes
+  roles:
+    # gfs-dev
+    - role: download-install
+      vars:
+        package: slack-desktop-4.0.2-amd64
+        url: https://downloads.slack-edge.com/linux_releases
