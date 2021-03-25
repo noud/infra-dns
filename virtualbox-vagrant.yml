@@ -12,6 +12,10 @@
             - virtualbox
             # - virtualbox-ext-pack 
             # - virtualbox-qt
+    - role: download-install
+      vars:
+        package: vagrant_2.2.9_x86_64
+        url: https://releases.hashicorp.com/vagrant/2.2.9
 - hosts: localhost
   vars_files:
     - [ "vars.yml" ]

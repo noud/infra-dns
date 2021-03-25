@@ -1,0 +1,21 @@
+- name: Check that {{ package }}.deb exists
+  stat:
+    path: "/home/{{sudo_user}}/Downloads/{{ package }}.deb"
+  register: stat_result
+- name: Download {{ package }}.deb
+  when: not stat_result.stat.exists
+  get_url:
+    url: "{{ url }}/{{ package }}.deb"
+    dest: "/home/{{ sudo_user }}/Downloads/{{ package }}.deb"
+# - name: Install package {{ package }}
+  # package:
+  #   name: "/home/{{ sudo_user }}/Downloads/{{ package }}.deb"
+  #   state: present
+  # apt:
+  #   name: "/home/{{ sudo_user }}/Downloads/{{ package }}.deb"
+  #   state: present
+  # vars:
+  #   packages:
+  #      - "/home/{{ sudo_user }}/Downloads/{{ package }}.deb"
+- name: Execute shell command 'apt install'
+  command: "apt install /home/{{ sudo_user }}/Downloads/{{ package }}.deb"
