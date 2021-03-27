@@ -5,7 +5,6 @@
     - [ "vars.yml" ]
   ignore_errors: yes
   roles:
-    # gfs-dev
     - role: download-install
       vars:
         package: slack-desktop-4.0.2-amd64
