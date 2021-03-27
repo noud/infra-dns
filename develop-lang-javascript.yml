@@ -9,6 +9,11 @@
         repo: https://dl.yarnpkg.com/debian/
     - role: packages
       vars:
+        package_name: JavaScript dependancy for pngquant
+        packages:
+            - libpng-dev
+    - role: packages
+      vars:
         package_name: JavaScript
         packages:
             - nodejs
