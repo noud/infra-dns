@@ -1,5 +1,5 @@
 # [DNS](http://en.wikipedia.org/wiki/Domain_Name_System)
-![dns](./doc/20201024_175247.jpg?raw=true "dns")
+![dns](./doc/clean_mouse.jpg?raw=true "dns")
 internal DNS server infrastructure on APT Linux.
 ## Infrastructure
 ### name servers
