@@ -67,3 +67,7 @@
         packages:
             - xournal
             - okular
+    - role: download-install
+      vars:
+        package: master-pdf-editor-5.4.38-qt5.amd64
+        url: https://code-industry.net/public
