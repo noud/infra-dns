@@ -71,3 +71,11 @@
       vars:
         package: master-pdf-editor-5.7.53-qt5.x86_64
         url: https://code-industry.net/public
+    - role: repo-apt-add-ppa
+      vars:
+        repo: ppa:scribus/ppa
+    - role: packages
+      vars:
+        package_name: scribus
+        packages:
+            - scribus-ng
