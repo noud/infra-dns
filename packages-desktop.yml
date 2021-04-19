@@ -69,5 +69,5 @@
             - okular
     - role: download-install
       vars:
-        package: master-pdf-editor-5.4.38-qt5.amd64
+        package: master-pdf-editor-5.7.53-qt5.x86_64
         url: https://code-industry.net/public
