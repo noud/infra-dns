@@ -12,3 +12,8 @@
       vars:
         group: plugdev
         user: "{{sudo_user}}"
+    - role: packages
+      vars:
+        package_name: adb
+        packages:
+            - adb
