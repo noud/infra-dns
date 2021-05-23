@@ -1,5 +1,7 @@
 - name: Desktop
   import_playbook: packages-desktop.yml
+- name: MS Edge
+  import_playbook: packages-ms-edge.yml
 - name: MS Teams
   import_playbook: packages-teams.yml
 - name: Gnome
