@@ -6,3 +6,5 @@
   ignore_errors: yes
   roles:
     - role: telegram
+      vars:
+        archive_name: tsetup.2.8.10.tar.xz
