@@ -8,6 +8,8 @@
   import_playbook: packages-gnome.yml
 - name: Gnome Extensions
   import_playbook: packages-gnome-extensions.yml
+- name: Telegram
+  import_playbook: packages-telegram.yml
 - name: Network
   import_playbook: packages-network.yml
 - hosts: localhost
