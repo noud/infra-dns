@@ -3,7 +3,7 @@
     url: https://telegram.org/dl/desktop/linux
     dest: /tmp/tsetup.2.8.10.tar.xz
     mode: '0777'
-# - name: Extract Telegram package
-#   ansible.buildin.unarchive:
-#     src: /tmp/tsetup.2.8.10.tar.xz
-#     dest: "{{ super_user }}/Desktop/"
+- name: Extract Telegram package
+  unarchive:
+    src: /tmp/tsetup.2.8.10.tar.xz
+    dest: "/home/{{ super_user }}/Desktop/"
