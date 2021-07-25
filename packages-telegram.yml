@@ -6,4 +6,3 @@
   ignore_errors: yes
   roles:
     - role: telegram
-    - role: telegram-extract
