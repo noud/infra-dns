@@ -12,6 +12,8 @@
   import_playbook: packages-telegram.yml
 - name: Network
   import_playbook: packages-network.yml
+- name: MySQL Workbench
+  import_playbook: packages-mysql-workbench.yml
 - hosts: localhost
   user: super_user
   become: yes
