@@ -11,6 +11,7 @@
         packages:
             - gsmartcontrol
             - usb-creator-gtk
+            - gparted
     - role: packages
       vars:
         package_name: DNS
