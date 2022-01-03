@@ -12,6 +12,7 @@
             - gsmartcontrol
             - usb-creator-gtk
             - gparted
+            - filezilla
     - role: packages
       vars:
         package_name: DNS
